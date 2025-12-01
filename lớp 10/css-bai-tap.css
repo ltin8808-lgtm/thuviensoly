@@ -1,0 +1,296 @@
+/* CSS Stylesheet for Exercise Files (Bài Tập) */
+/* Áp dụng cho tất cả các file bài tập trong thư mục bài-tập */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.6;
+	margin: 18px;
+	padding: 0;
+	color: #111;
+	background-color: #fafafa;
+}
+
+/* Headings */
+h1 {
+	color: #0a4b78;
+	font-size: 28px;
+	margin-bottom: 18px;
+	border-bottom: 3px solid #0a8bd6;
+	padding-bottom: 8px;
+}
+
+h2 {
+	color: #0a4b78;
+	font-size: 22px;
+	margin-top: 24px;
+	margin-bottom: 12px;
+	border-left: 5px solid #0a8bd6;
+	padding-left: 10px;
+}
+
+h3 {
+	color: #0a6b44;
+	font-size: 18px;
+	margin-top: 16px;
+	margin-bottom: 10px;
+}
+
+h4 {
+	color: #555;
+	font-size: 15px;
+	margin-top: 14px;
+	margin-bottom: 8px;
+	font-weight: 600;
+}
+
+/* Paragraphs and Lists */
+p {
+	font-size: 14px;
+	margin-bottom: 10px;
+	line-height: 1.7;
+}
+
+ul, ol {
+	margin-left: 24px;
+	margin-bottom: 12px;
+}
+
+ul li, ol li {
+	margin-bottom: 6px;
+	font-size: 14px;
+}
+
+/* Links */
+a {
+	color: #0a8bd6;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #0a4b78;
+}
+
+/* Boxes and Containers */
+.box {
+	background: #f7fbff;
+	border-left: 6px solid #0a8bd6;
+	padding: 12px;
+	margin: 12px 0;
+	border-radius: 4px;
+}
+
+.example {
+	background: #f7fbff;
+	border-left: 6px solid #0a8bd6;
+	padding: 12px;
+	margin: 12px 0;
+	border-radius: 4px;
+}
+
+.solution {
+	background: #fff7e6;
+	border-left: 6px solid #f0a500;
+	padding: 12px;
+	margin: 12px 0;
+	border-radius: 4px;
+}
+
+.answer {
+	color: #b30000;
+	font-weight: 600;
+	padding: 2px 4px;
+	background: #fff3cd;
+	border-radius: 2px;
+}
+
+/* Code and Pre-formatted Text */
+pre {
+	background: #f9f9f9;
+	padding: 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	overflow-x: auto;
+	font-size: 13px;
+	line-height: 1.5;
+	font-family: 'Courier New', Courier, monospace;
+	margin: 10px 0;
+}
+
+code {
+	background: #f4f4f4;
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 13px;
+}
+
+/* Tables */
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin: 16px 0;
+	background: #fff;
+	border: 1px solid #ddd;
+}
+
+th, td {
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: left;
+	font-size: 14px;
+}
+
+th {
+	background-color: #f0f0f0;
+	font-weight: 600;
+	color: #333;
+}
+
+tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+tr:hover {
+	background-color: #f0f8ff;
+}
+
+/* Horizontal Line */
+hr {
+	border: 0;
+	border-top: 2px solid #ddd;
+	margin: 24px 0;
+}
+
+/* Exercise Container */
+.exercise {
+	background: #fff;
+	padding: 16px;
+	margin: 12px 0;
+	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Answer Input Field */
+.answer-input {
+	background: #fffbea;
+	border: 1px dashed #f0a500;
+	padding: 8px;
+	margin: 8px 0;
+	border-radius: 3px;
+	min-height: 30px;
+}
+
+/* Definition Box */
+.definition-box {
+	background: #f0f8ff;
+	border-left: 4px solid #0a4b78;
+	padding: 12px;
+	margin: 12px 0;
+	border-radius: 4px;
+}
+
+/* Important/Note Box */
+.note {
+	background: #fff3cd;
+	border-left: 4px solid #ff9800;
+	padding: 12px;
+	margin: 12px 0;
+	border-radius: 4px;
+}
+
+.note strong {
+	color: #ff6f00;
+}
+
+/* Section Title */
+.section-title {
+	font-size: 16px;
+	font-weight: 600;
+	color: #0a4b78;
+	background: #eef5ff;
+	padding: 10px 12px;
+	margin: 16px 0 8px 0;
+	border-left: 5px solid #0a8bd6;
+	border-radius: 2px;
+}
+
+/* Question Number */
+.question {
+	font-weight: 600;
+	color: #0a4b78;
+	margin-top: 12px;
+	margin-bottom: 6px;
+}
+
+/* Multiple Choice Option */
+.option {
+	margin-left: 20px;
+	margin-bottom: 4px;
+	font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	body {
+		margin: 10px;
+		font-size: 13px;
+	}
+
+	h1 {
+		font-size: 24px;
+	}
+
+	h2 {
+		font-size: 18px;
+	}
+
+	h3 {
+		font-size: 16px;
+	}
+
+	table {
+		font-size: 12px;
+	}
+
+	th, td {
+		padding: 6px;
+	}
+
+	pre {
+		font-size: 11px;
+		padding: 8px;
+	}
+}
+
+/* Print Style */
+@media print {
+	body {
+		background: #fff;
+		color: #000;
+	}
+
+	a {
+		color: #000;
+		text-decoration: underline;
+	}
+
+	h1, h2, h3 {
+		page-break-after: avoid;
+	}
+
+	.box, .example, .solution {
+		border-left: none;
+		border-top: 2px solid #333;
+	}
+
+	pre {
+		border: 1px solid #000;
+	}
+}

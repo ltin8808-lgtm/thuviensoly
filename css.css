@@ -1,0 +1,281 @@
+ body{
+         font-family: 'Asap', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+         font-weight: 400;
+         line-height: 1.45;
+         
+           }
+
+/* Remove underlines from all links */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited{
+    color: inherit;
+}
+
+:root{
+    --bg: #f7fbff; /* very light blue */
+    --card: #ffffff; /* white cards */
+    --soft: #e8f6f3; /* soft mint */
+    --accent: #0b6b61; /* teal accent */
+    --muted: #6b7a80;
+}
+body{
+    background: var(--bg);
+}
+
+/* Theme: orange variant (apply by adding class `theme-orange` to <body>) */
+.theme-orange{
+    --bg: #fffbf5; /* warmer, lighter cream */
+    --card: #fffef9; /* almost white with warm tint */
+    --soft: #ffe8d4; /* subtle warm peach hover */
+    --accent: #d9840f; /* lighter, softer orange */
+    --muted: #8a6b58;
+}
+            /* Navigation containers - flex layouts */
+            .nav,
+            .nav2,
+            .nav3 {
+                color: #023A5A;
+                display: flex;
+                justify-content: space-between;
+            }
+            .nav {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            .nav2 {
+                margin: 25px;
+            }
+            .nav4 {
+                color: var(--accent);
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                gap: 16px;
+                padding: 18px 24px;
+                background: linear-gradient(90deg, rgba(11,107,97,0.08), rgba(11,107,97,0.02));
+                border-bottom: 1px solid rgba(11,107,97,0.06);
+                border-radius: 8px;
+            }
+            /* Navigation items - list containers */
+            .nav-item,
+            .nav-item2 {
+                font-family: inherit;
+                color: #023A5A;
+                padding-left: 0;
+                margin: auto 36px;
+            }
+            .nav-item2 {
+                margin-top: -5px;
+            }
+            /* Navigation list items - basic */
+            .nav-list,
+            .nav-list4 {
+                font-family: inherit;
+                color: #023A5A;
+                list-style: none;
+                display: inline-block;
+                margin: 0 8px;
+            }
+            .nav-list {
+                font-size: 1.5rem;
+            }
+            .nav-list4 {
+                font-size: 2rem;
+            }
+            /* Navigation list items - sizes 2 & 5 */
+            .nav-list2,
+            .nav-list5 {
+                font-family: inherit;
+                color: #023A5A;
+                margin-top: 0;
+                padding: 0;
+                font-size: 1.5rem;
+            }
+            .nav-list2 {
+                font-size: 2rem;
+            }
+            /* Navigation list items - boxed */
+            .nav-list3 {
+                font-family: inherit;
+                color: #023A5A;
+                list-style: none;
+                display: inline-block;
+                margin: 50px;
+                padding: 20px;
+                font-size: 2.5rem;
+                border: 2px solid #023A5A;
+                border-radius: 10px;
+            }
+            /* Paragraph / text sizes */
+            .p {
+                font-family: inherit;
+                font-size: 2.5rem;
+            }
+            .p2,
+            .p3 {
+                font-family: inherit;
+            }
+            .p2 {
+                font-size: 6rem;
+                margin-top: 50px;
+                margin-bottom: -70px;
+            }
+            .p3 {
+                font-size: 4rem;
+                margin-top: 0;
+                margin-bottom: -110px;
+                margin-left: 150px;
+            }
+            .span{
+                font-family: inherit;
+                font-size: 50px;
+                color: #023A5A;
+                margin-bottom: 60px;
+                margin-top:100px;
+            }
+            .div{
+                font-family: inherit;
+                padding-top: 40px;
+            }
+            .search-box {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                margin-top: 25px;
+            }
+            .search-box input {
+                font-family: inherit;
+                padding: 6px 10px;
+                font-size: 2rem;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                width: 100%;
+                max-width: 500px;
+                box-sizing: border-box;
+            }
+            .button{
+                font-family: inherit;
+                font-size: 1.5rem;
+                padding: 10px 30px;
+                background-color: #023A5A;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                white-space: nowrap;
+            }
+            .imgbackground{
+                width: 100%;
+                max-width: 350px;
+                height: auto;
+                display: block;
+            }
+            /* Image sizes */
+            .img {
+                width: 450px;
+                height: 350px;
+            }
+            .img2,
+            .img3 {
+                object-fit: contain;
+            }
+            .img2 {
+                width: 120px;
+                height: 120px;
+            }
+            .img3 {
+                width: 120px;
+                height: 120px;
+                border-radius: 8px;
+                background: transparent;
+            }
+            .top{
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+/*javasprit*/
+            .item .content {
+                display: none; /* ẩn nội dung */
+                padding: 12px;
+                background: var(--card);
+                box-shadow: 0 6px 14px rgba(15, 23, 30, 0.04);
+                border-radius: 8px;
+                margin-top: 8px;
+            }
+            .title{
+                font-family: inherit;
+                color: var(--accent);
+                margin-top:0px;
+                padding:8px 12px;
+                font-size: 1.6rem ;
+                background: transparent;
+                border-radius: 8px;
+            }
+            .item.active .content {
+               display: block; /* hiện nội dung khi active */
+            }
+
+            /* Remove default bullets and style the accordion list links */
+            .content{
+                list-style: none;
+                margin: 0;
+                padding-left: 0;
+            }
+            .content li{
+                margin: 0;
+                padding: 0;
+            }
+            .content li a{
+                display: block; /* makes the whole row clickable */
+                text-decoration: none; /* remove underline */
+                color: var(--muted); /* keep readable color */
+                padding: 12px 16px;
+                border-radius: 10px;
+                transition: background 180ms ease, transform 120ms ease, color 180ms ease;
+                font-weight: 500;
+            }
+            .content li a:hover{
+                background: var(--soft); /* subtle mint hover */
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(11, 107, 97, 0.08);
+            }
+            
+            /* Make Chapter 1 items slightly softer but still visible */
+            section.item.chapter:first-of-type .content li a{
+                color: #5a6b75;
+                font-weight: 500;
+                opacity: 0.9;
+            }
+            section.item.chapter:first-of-type .content li a:hover{
+                opacity: 1;
+            }
+
+            /* Chapter card look */
+            section.item.chapter{
+                background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(232,246,243,0.2));
+                padding: 16px 20px;
+                border-radius: 12px;
+                margin: 14px 10px;
+                border: 1px solid rgba(11,107,97,0.08);
+                box-shadow: 0 2px 8px rgba(11, 107, 97, 0.04);
+                transition: box-shadow 200ms ease, transform 200ms ease;
+            }
+            
+            section.item.chapter:hover{
+                box-shadow: 0 6px 16px rgba(11, 107, 97, 0.08);
+                transform: translateY(-2px);
+            }
+
+            /* make sections stand out on larger screens */
+            @media (min-width: 900px){
+                section.item.chapter{ display: block; }
+            }
+
+            /* Optional: smaller gap between title and list */
+            .item .title{
+                cursor: pointer;
+            }

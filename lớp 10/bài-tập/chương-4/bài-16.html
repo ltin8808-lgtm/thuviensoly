@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BÀI 16: LỰC CẢN VÀ LỰC NÂNG</title>
+  <link rel="stylesheet" href="../../css-bai-tap.css">
+</head>
+<body>
+<h1>BÀI 16: LỰC CẢN VÀ LỰC NÂNG</h1>
+
+<h2>PHƯƠNG PHÁP GIẢI</h2>
+
+<h3>DẠNG 1: TÍNH LỰC ĐẨY ARCHIMEDES</h3>
+<p>Áp dụng công thức tính lực đẩy Archimedes, với:</p>
+<pre>
+F_đẩy = ρ_chấtlỏng * g * V_chấtlỏng_bị_chiếm
+trong đó:
+F_đẩy: lực đẩy Archimedes (N),
+ρ_chấtlỏng: khối lượng riêng của chất lỏng (kg/m³),
+g: gia tốc trọng trường (≈ 9,8 m/s²),
+V_chấtlỏng_bị_chiếm: thể tích phần chất lỏng bị vật chiếm chỗ (m³).
+</pre>
+
+<div class="example">
+<strong>Ví dụ 1:</strong> Một vật có khối lượng 567 g làm bằng chất có khối lượng riêng 10,5 g/cm³ được nhúng hoàn toàn trong nước. Biết trọng lượng riêng của nước là 9970 N/m³. Lực đẩy Archimedes tác dụng lên vật gần nhất với giá trị nào sau đây?
+<br>A. 0,4 N. B. 0,5 N. C. 0,6 N. D. 0,7 N.
+<br><strong>Hướng dẫn giải:</strong>
+<pre>
+Thể tích của vật: V = m / ρ = 0,567 kg / (10,5×10^3 kg/m³) = ... m³
+Lực đẩy Archimedes: F_đẩy = ρ_nước * g * V
+</pre>
+ (thay số để tính kết quả gần nhất)
+</div>
+
+<h3>DẠNG 2: TREO VẬT VÀO LỰC KẾ SAU ĐÓ NHÚNG CHÌM VẬT VÀO CHẤT LỎNG</h3>
+<ul>
+  <li>Khi treo vật ngoài không khí, số chỉ lực kế bằng trọng lượng của vật.</li>
+  <li>Khi nhúng chìm vật vào chất lỏng, số chỉ lực kế là độ chênh lệch giữa trọng lực và lực đẩy Archimedes (F_k = P - F_đẩy).</li>
+</ul>
+
+<div class="example">
+<strong>Ví dụ 2:</strong> Một vật được móc vào một lực kế. Khi để ở ngoài không khí, lực kế chỉ 5 N. Khi nhúng chìm hoàn toàn vật trong nước thì thấy lực kế chỉ 3,2 N. Lực đẩy Archimedes tác dụng lên vật có độ lớn là
+A. 0,6 N. B. 1,8 N. C. 6,4 N. D. 8,2 N.
+<br><strong>Hướng dẫn giải:</strong>
+<pre>
+Khi vật treo ngoài không khí thì F_khôngkhí = P = 5 N
+Khi nhúng chìm vật trong nước thì F_khi_nhúng = P - F_đẩy = 3,2 N
+=> F_đẩy = P - F_khi_nhúng = 5 - 3,2 = 1,8 N
+</pre>
+</div>
+
+<h3>DẠNG 3: VẬT CÂN BẰNG TRONG CHẤT LỎNG</h3>
+<ul>
+  <li>Vật cân bằng trong chất lỏng nên P = F_đẩy.</li>
+  <li>Dựa trên biểu thức đó tính toán các đại lượng đề bài yêu cầu.</li>
+</ul>
+
+<div class="example">
+<strong>Ví dụ 3:</strong> Một vật có thể tích V lơ lửng trên nước, một nửa thể tích của vật chìm trong nước. Hỏi trọng lượng riêng vật là bao nhiêu biết trọng lượng riêng của nước là 10000 N/m³?
+<br>A. 1000 N/m³. B. 3000 N/m³. C. 5000 N/m³. D. 7000 N/m³.
+<br><strong>Hướng dẫn giải:</strong>
+<pre>
+Vật lơ lửng nên P = F_đẩy = ρ_nước * g * V_chìm
+Nếu V_chìm = V/2 thì P = ρ_nước * g * (V/2) => trọng lượng riêng vật = ...
+</pre>
+</div>
+
+<h3>DẠNG 4: LỰC CẢN PHỤ THUỘC VÀO TỐC ĐỘ</h3>
+<p>- Dựa trên biểu thức liên hệ giữa lực cản và tốc độ, tìm đại lượng mà đề bài yêu cầu.</p>
+
+<div class="example">
+<strong>Ví dụ 4:</strong> Một con sứa đang bơi trong nước chịu tác dụng của lực cản (v là tốc độ tức thời tính theo đơn vị m/s). Giả sử con cá bơi theo phương ngang, để nó đạt được tốc độ 4 m/s thì độ lớn lực tối thiểu có giá trị là bao nhiêu?
+<br>A. 1,2 N. B. 2,1 N. C. 2,4 N. D. 4,2 N.
+<br><strong>Hướng dẫn giải:</strong>
+<pre>
+Để đạt được tốc độ 4 m/s thì độ lớn lực tối thiểu có giá trị là F_cần ≥ F_cản(v=4)
+</pre>
+</div>
+
+<hr>
+<h2>II. BÀI TẬP PHÂN DẠNG THEO MỨC ĐỘ</h2>
+
+<h3>PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn</h3>
+
+<strong>Mức độ BIẾT</strong>
+<ol>
+<li>Chất nào sau đây không được gọi là chất lưu?
+  <br>A. Không khí. B. Sắt. C. Nước. D. Dầu.</li>
+<li>Điều nào sau đây đúng khi nói về lực cản tác dụng lên một vật chuyển động trong chất lưu?
+  <br>A. Lực cản cùng phương cùng chiều với chiều chuyển động của vật.
+  <br>B. Lực cản không phụ thuộc vào hình dạng của vật.
+  <br>C. Lực cản tăng khi tốc độ tăng và không đổi khi đạt tốc độ tới hạn.
+  <br>D. Lực cản càng lớn khi vật có khối lượng càng lớn.</li>
+<li>Khẳng định nào sau đây là đúng khi nói về lực đẩy Archimedes?
+  <br>A. Lực đẩy hướng thẳng đứng lên trên.
+  <br>B. Lực đẩy hướng thẳng đứng xuống dưới.
+  <br>C. Lực đẩy có hướng theo mọi hướng.
+  <br>D. Lực đẩy hướng từ trái sang phải.</li>
+<li>Lực đẩy Archimedes phụ thuộc vào các yếu tố nào sau đây?
+  <br>A. Trọng lượng riêng của vật và thể tích của phần chất lỏng bị vật chiếm chỗ.
+  <br>B. Trọng lượng riêng của chất lỏng và thể tích của vật.
+  <br>C. Trọng lượng của chất lỏng và thể tích của phần chất lỏng bị vật chiếm chỗ.
+  <br>D. Trọng lượng riêng của chất lỏng và thể tích của phần chất lỏng bị vật chiếm chỗ.</li>
+<li>Nhận định nào sau đây là đúng?
+  <br>A. Lực đẩy cùng chiều với trọng lực.
+  <br>B. Lực đẩy tác dụng theo mọi phương vì chất lỏng gây áp suất theo mọi phương.
+  <br>C. Lực đẩy có điểm đặt ở trọng tâm hình học của vật.
+  <br>D. Lực đẩy luôn có độ lớn bằng trọng lượng của vật.</li>
+<li>Ghép đúng những lực được mô tả ở cột A với tên gọi tương ứng ở cột B.
+  <br>Cột A (1) Lực do chất lỏng tác dụng lên một vật nằm trong lòng chất lỏng đứng yên.
+  <br>(2) Lực do chênh lệch áp suất trên cánh máy bay.
+  <br>(3) Lực tác dụng lên quả táo chín rơi xuống.
+  <br>Cột B (a) Trọng lực. (b) Lực đẩy Archimedes. (c) Lực nâng.
+  <br>A. (1)-(a), (2)-(b), (3)-(c). B. (1)-(b), (2)-(c), (3)-(a). 
+  <br>C. (1)-(c), (2)-(a), (3)-(b). D. (1)-(a), (2)-(c), (3)-(b).</li>
+<li>Trong các trường hợp sau, trường hợp nào vật chịu tác dụng của lực cản của nước?
+  <br>A. Một chiếc ca nô đang neo đậu tại bến.
+  <br>B. Bạn An đang tập bơi.
+  <br>C. Một khúc gỗ đang trôi theo dòng nước chảy nhẹ.
+  <br>D. Một vật đang nằm lơ lửng cân bằng trong nước.</li>
+<li>Hình dạng nào của vật cho lực cản nhỏ nhất?
+  <br>A. Khối cầu. B. Hình dạng thuôn (khí động học). C. Khối lập phương. D. Khối trụ dài.</li>
+<li>Đâu không phải là đặc điểm của lực cản của chất lưu?
+  <br>A. Điểm đặt tại trọng tâm của vật.
+  <br>B. Phương trùng với phương chuyển động.
+  <br>C. Ngược với chiều chuyển động.
+  <br>D. Độ lớn phụ thuộc vào khối lượng của vật.</li>
+<li>Xe nào sau đây có lực cản không khí nhỏ nhất?
+  <br>A. Hình 1. B. Hình 2. C. Hình 3. D. Hình 4.</li>
+<li>Hãy sắp xếp đúng thứ tự ba giai đoạn chuyển động của vật khi được thả rơi trong chất lưu.
+  <br>(I) Chuyển động đều. (II) Nhanh dần đều trong khoảng thời gian ngắn. (III) Nhanh dần không đều.
+  <br>A. (I)-(II)-(III). B. (II)-(III)-(I). C. (III)-(I)-(II). D. (III)-(II)-(I).</li>
+<li>Cho hai tờ giấy giống nhau, một tờ vo tròn, một tờ để phẳng. Thả cùng độ cao thì sự rơi khác nhau vì
+  <br>A. lực hút Trái Đất. B. lực đẩy của hai tờ giấy. C. lực cản không khí. D. lực đàn hồi.</li>
+<li>Thả vật nặng vào chất lỏng có khối lượng riêng ρ. Khi vật nằm cân bằng phần thể tích chìm là V. Lấy g.
+  <br>Độ lớn lực đẩy Archimedes là
+  <br>A. ... B. ... C. ... D. ... (một trong các biểu thức với ρ, g, V).</li>
+<li>Khẳng định nào sau đây là không đúng trong công thức F_đẩy = ρ g V (V là...)
+  <br>A. thể tích của phần chất lỏng bị vật chiếm chỗ.
+  <br>B. thể tích của cả vật.
+  <br>C. thể tích của phần vật chìm.
+  <br>D. thể tích của phần chất lỏng dâng lên thêm khi có vật.</li>
+</ol>
+
+<strong>Mức độ HIỂU</strong>
+<ol start="15">
+  <li>Các tàu ngầm thường được thiết kế giống hình cá heo để
+    <br>A. giảm thiểu lực cản. B. đẹp mắt. C. tiết kiệm chi phí. D. tăng thể tích khoang.</li>
+  <li>Tại giai đoạn nước rút gần đích, vận động viên gập người để
+    <br>A. tăng lực cản. B. giảm lực cản. C. do thói quen. D. do cấu tạo xe.</li>
+  <li>Chọn phát biểu đúng.
+    <br>A. Lực cản càng lớn khi diện tích nhỏ.
+    <br>B. Lực cản không phụ thuộc vào tốc độ.
+    <br>C. Vật đi càng nhanh lực cản càng nhỏ.
+    <br>D. Tờ giấy phẳng rơi chậm hơn hòn đá.</li>
+  <li>Hai thỏi nhôm và thép có cùng thể tích nhúng chìm trong nước. Nhận xét?
+    <br>A. Thỏi chìm sâu hơn có lực đẩy lớn hơn.
+    <br>B. Thép nặng hơn nên chịu lực đẩy lớn hơn.
+    <br>C. Hai thỏi chịu lực đẩy như nhau vì cùng nhúng.
+    <br>D. Hai thỏi chịu lực đẩy như nhau vì chiếm cùng thể tích.</li>
+  <li>Một vật khi nhúng trong nước tĩnh chịu lực nào?
+    <br>A. Lực đẩy Archimedes. B. Lực đẩy và lực ma sát. C. Trọng lực. D. Trọng lực và lực đẩy Archimedes.</li>
+  <li>Tại sao nâng tảng đá trong nước thấy nhẹ hơn?
+    <br>A. Khối lượng thay đổi. B. Khối lượng nước thay đổi. C. Lực đẩy của nước. D. Lực đẩy của tảng đá.</li>
+  <li>Công thức tính lực đẩy Archimedes là F_đẩy = ρ g V. Ở hình vẽ V bằng
+    <br>A. thể tích toàn bộ vật. B. thể tích toàn bộ chất lỏng.
+    <br>C. thể tích phần chìm của vật. D. thể tích phần nổi của vật.</li>
+  <li>Ghép biểu thức so sánh P và F_đẩy với trạng thái vật:
+    <br>(1) P &gt; F_đẩy  (2) P &lt; F_đẩy  (3) P = F_đẩy
+    <br>(a) vật nổi lên, (b) vật chìm, (c) vật lơ lửng.
+    <br>A. (1)-(a), (2)-(b), (3)-(c). B. ... C. ... D. ...</li>
+  <li>Trong các trường hợp sau, trường hợp chịu lực cản lớn nhất so với trọng lực là
+    <br>A. Thả ô thẳng đứng. B. Thả tờ giấy vo tròn. C. Gập giấy thành thuyền. D. Gập giấy thành máy bay.</li>
+  <li>Tại sao yên xe đạp thể thao thường cao hơn ghi-đông?
+    <br>A. Tư thế cúi giúp giảm lực cản. B. Vì kiểu dáng. C. Dễ điều khiển. D. Giữ tốc độ ổn định.</li>
+  <li>Trong các lực sau, có bao nhiêu nguyên nhân khiến đám mây lơ lửng?
+    <br>(I) lực đẩy Archimedes của hơi nước. (II) lực cản của không khí.
+    <br>(III) lực đẩy Archimedes của không khí. (IV) trọng lực.
+    <br>A.1 B.2 C.3 D.4</li>
+  <li>Khi bỏ qua thay đổi g, thả viên bi vào cốc nước càng xuống sâu
+    <br>A. F_đẩy tăng, áp suất giảm.
+    <br>B. F_đẩy không đổi, áp suất tăng.
+    <br>C. F_đẩy giảm, áp suất tăng.
+    <br>D. F_đẩy giảm, áp suất giảm.</li>
+  <li>Hai vật M (sắt) và N (nhôm) cùng khối lượng treo hai đầu thanh CD (CO=OD). Nếu nhúng cả hai vào rượu thì thanh sẽ
+    <br>A. vẫn cân bằng. B. nghiêng về M. C. nghiêng về N. D. nghiêng về vật nhúng sâu hơn.</li>
+  <li>Hai thỏi đồng cùng thể tích, một thỏi trong nước, một thỏi trong dầu. Thỏi nào chịu lực đẩy lớn hơn?
+    <br>A. Thỏi trong dầu vì ρ_dầu > ρ_nước.
+    <br>B. Thỏi trong nước chịu lực đẩy nhỏ hơn vì ρ_nước > ρ_dầu.
+    <br>C. Thỏi trong nước chịu lực đẩy lớn hơn vì ρ_nước > ρ_dầu.
+    <br>D. Lực đẩy như nhau vì cùng thể tích.</li>
+  <li>Lực đẩy Archimedes tác dụng lên vật nhúng bằng
+    <br>A. trọng lượng của vật. B. trọng lượng của chất lỏng.
+    <br>C. trọng lượng phần chất lỏng bị vật chiếm chỗ. D. trọng lượng của phần vật nằm dưới mặt chất lỏng.</li>
+</ol>
+
+<strong>Mức độ VẬN DỤNG</strong>
+<ol start="31">
+  <li>Một quả cầu bằng sắt có thể tích 4 dm³ được nhúng chìm trong nước (ρ_nước = 1000 kg/m³). Lấy g. Lực đẩy Archimedes là
+    <br>A. 4000 N. B. 40000 N. C. 2500 N. D. 40 N.</li>
+  <li>Móc quả nặng vào lực kế ngoài không khí lực kế chỉ 30 N. Nhúng chìm vào nước thì chỉ số sẽ
+    <br>A. tăng. B. giảm. C. không đổi. D. bằng 0.</li>
+  <li>Quả cầu treo ngoài không khí lực kế chỉ 1,7 N; nhúng chìm trong nước lực kế chỉ 1,2 N. Lực đẩy Archimedes là
+    <br>A. 1,7 N. B. 1,2 N. C. 2,9 N. D. 0,5 N.</li>
+  <li>Vật móc lực kế ngoài không khí 2,13 N; nhúng chìm trong nước lực kế 1,83 N. Biết trọng lượng riêng nước 10000 N/m³. Thể tích vật là
+    <br>A. 213 cm³. B. 183 cm³. C. 30 cm³. D. 396 cm³.</li>
+  <li>Quả cầu đồng treo lực kế 4,45 N; ρ_rượu = 8000 N/m³, ρ_đồng = 89000 N/m³. Nhúng chìm trong rượu lực kế chỉ
+    <br>A. 4,45 N. B. 4,25 N. C. 4,15 N. D. 4,05 N.</li>
+  <li>Vật có V = 0,1 m³ và trọng lượng 2500 N. ρ_nước = 10000 N/m³. Để giữ vật cân bằng trong nước cần lực từ dưới lên là
+    <br>A. 2500 N. B. 1000 N. C. 1500 N. D. 3000 N.</li>
+  <li>Tre một vật có V = 0,5 dm³ vào lực kế rồi nhúng ngập vào nước, lực kế chỉ 5 N. ρ_nước = 10000 N/m³. Trọng lượng vật là
+    <br>A. 10 N. B. 5,5 N. C. 5 N. D. 0,1 N.</li>
+  <li>Vật gỗ lơ lửng trên nước, phần chìm V_chìm = 2 dm³. ρ_nước = 10000 N/m³, ρ_gỗ = 8000 N/m³. Thể tích miếng gỗ là
+    <br>A. 2 dm³. B. 2,5 dm³. C. 1,6 dm³. D. 4 dm³.</li>
+  <li>Vật hình hộp chữ nhật có kích thước ... và ρ = 550 kg/m³. Thả vào chất lỏng ρ = 1360 kg/m³. Chiều cao phần nhô lên khỏi mặt chất lỏng gần nhất là
+    <br>A. 2 cm. B. 3 cm. C. 3,5 cm. D. 2,2 cm.</li>
+  <li>Vật hình hộp cao 4 cm và ρ = 550 kg/m³, phần chìm bằng phần nhô lên. Khối lượng riêng chất lỏng là
+    <br>A. 1360 kg/m³. B. 1250 kg/m³. C. 1070 kg/m³. D. 1100 kg/m³.</li>
+  <li>Tảng băng trôi trên ly nước. Khi băng tan thành nước, hiện tượng là
+    <br>A. mực nước tăng; B. mực nước giảm; C. mực nước tăng bằng tổng thể tích băng; D. mực nước không thay đổi.</li>
+</ol>
+
+<h3>PHẦN II. Câu trắc nghiệm đúng/sai</h3>
+<p><strong>Câu 1.</strong> Xác định nhận định sau đây đúng hay sai khi thả một vật rơi trong chất lỏng?</p>
+<pre>
+a Lực đẩy Archimedes tác dụng theo mọi phương vì chất lỏng gây áp suất theo mọi phương.   Đúng / Sai
+b Chuyển động của vật nhanh dần không đều từ lúc bắt đầu rơi trong một khoảng thời gian ngắn.   Đúng / Sai
+c Vật chỉ chịu tác dụng của trọng lực và lực đẩy Archimedes trong suốt quá trình rơi.   Đúng / Sai
+d Nếu có tác nhân làm tăng lực cản khi vật chuyển động thì vật sẽ chậm dần rồi dừng và lơ lửng.   Đúng / Sai
+</pre>
+
+<p><strong>Câu 2.</strong> Một vật làm bằng sắt và một vật làm bằng hợp kim có cùng khối lượng... (các phát biểu Đúng/Sai như đề bài).</p>
+
+<p><strong>Câu 3.</strong> Hình biểu diễn quả tennis đang rơi... (các phát biểu Đúng/Sai theo đề bài).</p>
+
+<p><strong>Câu 4.</strong> Một vật nặng 3600 g có khối lượng riêng 1800 kg/m³... (các phát biểu Đúng/Sai theo đề bài).</p>
+
+<p><strong>Câu 5.</strong> Khối gỗ lập phương cạnh 40 cm nổi trên nước, phần cao nổi 5 cm. Đổ dầu, vật bị ngập. Hỏi các phát biểu Đúng/Sai.</p>
+
+<p><strong>Câu 6.</strong> Miếng hợp kim 35,4% vàng... (các phát biểu Đúng/Sai theo đề bài).</p>
+
+<h3>PHẦN III. Câu trắc nghiệm trả lời ngắn</h3>
+<ol>
+  <li>Lực phát động lớn nhất của mẫu ô tô là ...; lực cản phụ thuộc vào v theo biểu thức F_c = ... Xác định tốc độ ổn định (m/s).</li>
+  <li>Xe có khối lượng 550 kg, lực đẩy do động cơ 300 N, tổng lực cản 200 N. Tính gia tốc (m/s²), làm tròn 2 chữ số thập phân.</li>
+  <li>Khối gỗ hình hộp tiết diện cao ... khối lượng ... ρ_nước = ... Tìm chiều cao phần gỗ nổi (m).
+  <li>Quả cầu bằng sắt V = 100 cm³, nhúng chìm trong nước, ρ_nước = 1000 kg/m³. Tính F_đẩy (mN).</li>
+  <li>Tảng băng có phần thể tích chìm ≈ 90%. ρ_biển = 1020 kg/m³. Tính ρ_băng (kg/m³).
+  <li>Con cá bơi trong nước, để đạt v = 6 m/s, độ lớn lực tối thiểu là bao nhiêu?</li>
+</ol>
+
+<p><em>Ghi chú:</em> Nội dung trên đã được ghi đè toàn bộ vào file này theo yêu cầu.</p>
+
+</body>
+</html>
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chủ đề 19: Lực cản và lực nâng - Bài tập</title>
+  <link rel="stylesheet" href="../../../css.css" />
+</head>
+<body>
+  <main>
+    <h1> BÀI 16: LỰC CẢN VÀ LỰC NÂNG</h1>
+
+    <h2>PHƯƠNG PHÁP GIẢI</h2>
+
+    <h3>DẠNG 1: TÍNH LỰC ĐẨY ARCHIMEDES</h3>
+    <p>Áp dụng công thức tính lực đẩy Archimedes , với :</p>
+    <ul>
+      <li> : lực đẩy Archimedes (N),</li>
+      <li> : khối lượng riêng của chất lỏng (kg/m3),</li>
+      <li> : trọng lượng riêng của chất lỏng (N/m3),</li>
+      <li> : thể tích phần chất lỏng bị chiếm chỗ (m3).</li>
+    </ul>
+
+    <p><strong>Ví dụ 1:</strong> Một vật có khối lượng 567 g làm bằng chất có khối lượng riêng 10,5 g/cm3 được nhúng hoàn toàn trong nước. Biết trọng lượng riêng của nước là 9970 kg/m3. Lực đẩy Archimedes tác dụng lên vật gần nhất với giá trị nào sau đây?<br/>
+    A. 0,4 N. B. 0,5 N. C. 0,6 N. D. 0,7 N.</p>
+
+    <p><strong>Hướng dẫn giải:</strong><br/>
+    Thể tích của vật: <br/>
+    Lực đẩy Archimedes: </p>
+
+    <h3>DẠNG 2: TREO VẬT VÀO LỰC KẾ SAU ĐÓ NHÚNG CHÌM VẬT VÀO CHẤT LỎNG</h3>
+    <ul>
+      <li>Khi treo vật ngoài không khí, số chỉ lực kế bằng trọng lượng của vật.</li>
+      <li>Khi nhúng chìm vật vào chất lỏng, số chỉ lực kế là độ chênh lệch độ lớn của trọng lực và lực đẩy Archimedes.</li>
+    </ul>
+
+    <p><strong>Ví dụ 2:</strong> Một vật được móc vào một lực kế. Khi để ở ngoài không khí, lực kế chỉ 5N. Khi nhúng chìm hoàn toàn vật trong nước thì thấy lực kế chỉ 3,2 N. Lực đẩy Archimedes tác dụng lên vật có độ lớn là<br/>
+    A. 0,6 N. B. 1,8 N. C. 6,4 N. D. 8,2 N.</p>
+
+    <p><strong>Hướng dẫn giải:</strong><br/>
+    Khi vật treo ngoài không khí thì <br/>
+    Khi nhúng chìm vật trong nước thì </p>
+
+    <h3>DẠNG 3: VẬT CÂN BẰNG TRONG CHẤT LỎNG</h3>
+    <p>- Vật cân bằng trong chất lỏng nên .</p>
+    <p>- Dựa trên biểu thức đó tính toán các đại lượng đề bài yêu cầu.</p>
+
+    <p><strong>Ví dụ 3:</strong> Một vật có thể tích V  lơ lửng trên nước, một nửa thể tích của vật chìm trong nước. Hỏi trọng lượng riêng vật là bao nhiêu biết trọng lượng riêng của nước là 10000 N/m3?<br/>
+    A. 1000 N/m3. B. 3000 N/m3. C. 5000 N/m3. D. 7000 N/m3.</p>
+
+    <p><strong>Hướng dẫn giải:</strong><br/>
+    Vật lơ lửng nên </p>
+
+    <h3>DẠNG 4: LỰC CẢN PHỤ THUỘC VÀO TỐC ĐỘ</h3>
+    <p>- Dựa trên biểu thức liên hệ giữa lực cản và tốc độ, tìm đại lượng mà đề bài yêu cầu.</p>
+
+    <p><strong>Ví dụ 4:</strong> Một con sứa đang bơi trong nước chịu tác dụng của lực cản (v là tốc độ tức thời tính theo đơn vị m/s). Giả sử con cá bơi theo phương ngang, để nó đạt được tốc độ 4 m/s thì độ lớn lực tối thiểu có giá trị là bao nhiêu?<br/>
+    A. 1,2 N. B. 2,1 N. C. 2,4 N. D. 4,2 N.</p>
+
+    <p><strong>Hướng dẫn giải:</strong><br/>
+    Để đạt được tốc độ 4 m/s thì độ lớn lực tối thiểu có giá trị là </p>
+
+
+    <h2>II. BÀI TẬP PHÂN DẠNG THEO MỨC ĐỘ</h2>
+
+    <h3>PHẦN I. Câu trắc nhiệm nhiều phương án lựa chọn</h3>
+    <p><strong>Mức độ BIẾT</strong></p>
+    <ol>
+      <li>Chất nào sau đây không được gọi là chất lưu?<br/>A. Không khí. B. Sắt. C. Nước. D. Dầu.</li>
+      <li>Điều nào sau đây đúng khi nói về lực cản tác dụng lên một vật chuyển động trong chất lưu?<br/>A. Lực cản của chất lưu cùng phương cùng chiều với chiều chuyển động của vật.<br/>B. Lực cản của chất lưu không phụ thuộc vào hình dạng của vật.<br/>C. Lực cản của chất lưu tăng khi tốc độ của vật tăng và không đổi khi vật chuyển động đạt tốc độ tới hạn.<br/>D. Lực cản của chất lưu càng lớn khi vật có khối lượng càng lớn.</li>
+      <li>Khẳng định nào sau đây là đúng khi nói về lực đẩy Archimedes?<br/>A. Lực đẩy Archimedes hướng thẳng đứng lên trên.<br/>B. Lực đẩy Archimedes hướng thẳng đứng xuống dưới.<br/>C. Lực đẩy Archimedes có hướng theo mọi hướng.<br/>D. Lực đẩy Archimedes hướng từ trái sáng phải.</li>
+      <li>Lực đẩy Archimedes phụ thuộc vào các yếu tố nào sau đây?<br/>A. Trọng lượng riêng của vật và thể tích của phần chất lỏng bị vật chiếm chỗ.<br/>B. Trọng lượng riêng của chất lỏng và thể tích của vật.<br/>C. Trọng lượng của chất lỏng và thể tích của phần chất lỏng bị vật chiếm chỗ.<br/>D. Trọng lượng riêng của chất lỏng và thể tích của phần chất lỏng bị vật chiếm chỗ.</li>
+      <li>Nhận định nào sau đây là đúng?<br/>A. Lực đẩy Archimedes cùng chiều với trọng lực.<br/>B. Lực đẩy Archimedes tác dụng theo mọi phương vì chất lỏng gây áp suất theo mọi phương.<br/>C. Lực đẩy Archimedes có điểm đặt ở trọng tâm hình học của vật.<br/>D. Lực đẩy Archimedes luôn có độ lớn bằng trọng lượng của vật.</li>
+      <li>Ghép đúng những lực được mô tả ở cột A với tên gọi tương ứng ở cột B.<br/>Cột A &nbsp;&nbsp;&nbsp; Cột B<br/>(1) Lực do chất lỏng tác dụng lên một vật nằm trong lòng chất lỏng đứng yên. &nbsp;&nbsp; (a) Trọng lực.<br/>(2) Lực được tạo ra do sự chênh lệch áp suất giữa hai bề mặt ở phía trên và phía dưới cánh máy bay khi máy bay đang bay. &nbsp;&nbsp; (b) Lực đẩy Archimedes.<br/>(3) Lực tác dụng lên một quả táo chín rời cành làm nó rơi xuống đất. &nbsp;&nbsp; (c) Lực nâng.<br/>A. (1) – (a), (2) – (b), (3) – (c). B. (1) – (b), (2) – (c), (3) – (a).<br/>C. (1) – (c), (2) – (a), (3) – (b). D. (1) – (a), (2) – (c), (3) – (b).</li>
+      <li>Trong các trường hợp sau, trường hợp nào vật chịu tác dụng của lực cản của nước?<br/>A. Một chiếc ca nô đang neo đậu tại bến.<br/>B. Bạn An đang tập bơi.<br/>C. Một khúc gỗ đang trôi theo dòng nước chảy nhẹ.<br/>D. Một vật đang nằm lơ lửng cân bằng trong nước.</li>
+      <li>Hình dạng nào của vật cho lực cản nhỏ nhất?<br/>A. Khối cầu. B. Hình dạng thuôn (hình dạng khí động học). C. Khối lập phương. D. Khối trụ dài.</li>
+      <li>Đâu không phải là đặc điểm của lực cản của chất lưu?<br/>A. Điểm đặt tại trọng tâm của vật.<br/>B. Phương trùng với phương chuyển động của vật trong chất lưu.<br/>C. Ngược với chiều chuyển động của vật trong chất lưu.<br/>D. Độ lớn phụ thuộc vào khối lượng của vật.</li>
+      <li>Xe nào sau đây có lực cản không khí nhỏ nhất?<br/>A. Hình 1. B. Hình 2. C. Hình 3. D. Hình 4.</li>
+      <li>Hãy sắp xếp đúng thứ tự ba giai đoạn chuyển động của vật khi một vật được thả rơi trong chất lưu.<br/>(I) Chuyển động đều.<br/>(II) Nhanh dần đều trong một khoảng thời gian ngắn.<br/>(III) Nhanh dần không đều.<br/>A. (I) – (II) – (III). B. (II) – (III) – (I). C. (III) – (I) – (II). D. (III) – (II) – (I).</li>
+      <li>Cho hai tờ giấy giống nhau, một tờ vo tròn, 1 tờ để phẳng. Thả hai tờ giấy ở cùng một độ cao thì sự rơi của hai tờ giấy là khác nhau. Nguyên nhân của lực khác nhau này là do<br/>A. lực hút của Trái Đất lên hai tờ giấy. B. lực đẩy của hai tờ giấy với nhau.<br/>C. lực cản của không khí lên hai tờ giấy. D. lực đàn hồi của hai tờ giấy.</li>
+      <li>Thả một vật nặng vào trong chất lỏng có khối lượng riêng . Khi vật nằm cân bằng thì phần thể tích vật chìm trong chất lỏng là V. Lấy . Độ lớn lực đẩy Archimedes tác dụng lên vật là<br/>A. B. C. D.</li>
+      <li>Khẳng định nào sau đây là không đúng? Trong công thức tính độ lớn của lực đẩy Archimedes: , trong đó là khối lượng riêng của chất lỏng, là gia tốc trọng trường và V là<br/>A. thể tích của phần chất lỏng bị vật chiếm chỗ.<br/>B. thể tích của cả vật.<br/>C. thể tích của phần vật chìm trong chất lỏng.<br/>D. thể tích của phần chất lỏng dâng lên thêm khi có vật trong chất lỏng.</li>
+    </ol>
+
+    <p><strong>Mức độ HIỂU</strong></p>
+    <ol start="15">
+      <li>Các tàu ngầm thường được thiết kế giống với hình dạng của cá heo để<br/>A. giảm thiểu lực cản. B. đẹp mắt.<br/>C. tiết kiệm chi phí chế tạo. D. tăng thể tích khoang chứa.</li>
+      <li>Vì sao ở giai đoạn nước rút gần về đích, vận động viên đua xe đạp thường có động tác gập người và đầu hơi cúi xuống?<br/>A. Nhằm mục đích tăng lực cản không khí. B. Nhằm mục đích giảm lực cản không khí.<br/>C. Do thói quen của vận động viên. D. Do cấu tạo của xe đạp.</li>
+      <li>Chọn phát biểu đúng.<br/>A. Độ lớn của lực cản càng lớn khi diện tích mặt cản càng nhỏ.<br/>B. Độ lớn của lực cản không phụ thuộc vào tốc độ của vật.<br/>C. Vật đi càng nhanh thì lực cản của không khí càng nhỏ.<br/>D. Tờ giấy để phẳng rơi chậm hơn hòn đá khi cùng được thả từ trạng thái nghỉ trong không khí.</li>
+      <li>Một thỏi nhôm và một thỏi thép có thể tích bằng nhau cùng được nhúng chìm trong nước. Nhận xét nào sau đây là đúng?<br/>A. Thỏi nào chìm sâu hơn thì lực đẩy Archimedes tác dụng lên thỏi đó lớn hơn.<br/>B. Thép có trọng lượng riêng lớn hơn nhôm nên thỏi thép chịu tác dụng của lực đẩy Archimedes lớn hơn.<br/>C. Hai thỏi nhôm và thép đều chịu tác dụng của lực đẩy Archimedes như nhau vì chúng cùng được nhúng trong nước như nhau.<br/>D. Hai thỏi nhôm và thép đều chịu tác dụng của lực đẩy Archimedes như nhau vì chúng chiếm thể tích trong nước như nhau.</li>
+      <li>Một vật khi được nhúng vào trong nước tĩnh chịu tác dụng của những lực nào?<br/>A. Lực đẩy Archimedes. B. Lực đẩy Archimedes và lực ma sát.<br/>C. Trọng lực. D. Trọng lực và lực đẩy Archimedes.</li>
+      <li>Vì sao khi nâng một tảng đá ở trong nước ta thấy nhẹ hơn khi nâng nó trong không khí?<br/>A. Khối lượng của tảng đá thay đổi. B. Khối lượng của nước thay đổi<br/>C. Lực đẩy của nước. D. Lực đẩy của tảng đá.</li>
+      <li>Công thức tính lực đẩy Archimedes là. Ở hình vẽ bên thì V bằng<br/>A. thể tích toàn bộ vật. B. thể tích toàn bộ chất lỏng.<br/>C. thể tích phần chìm của vật. D. thể tích phần nổi của vật.</li>
+      <li>Có thể xảy ra ba trường hợp đối với trọng lượng P của vật và độ lớn lực đẩy Archimedes khi vật được thả vào trong chất lỏng. Ghép đúng biểu thức so sánh độ lớn của hai lực ở cột A với câu mô tả trạng thái tương ứng của vật ở cột B.<br/>Cột A &nbsp;&nbsp;&nbsp; Cột B<br/>(1) &nbsp;&nbsp;&nbsp; (a) Vật chuyển động lên trên mặt thoáng (nổi lên).<br/>(2) &nbsp;&nbsp;&nbsp; (b) Vật chuyển động xuống dưới đáy (chìm xuống).<br/>(3) &nbsp;&nbsp;&nbsp; (c) Vật nằm lơ lửng trong chất lỏng (đứng yên).<br/>A. (1) – (a), (2) – (b), (3) – (c). B. (1) – (b), (2) – (c), (3) – (a).<br/>C. (1) – (c), (2) – (a), (3) – (b). D. (1) – (a), (2) – (c), (3) – (b).</li>
+      <li>Trong các trường hợp sau, trường hợp nào chịu lực cản của không khí so với trọng lực là lớn nhất?<br/>A. Thả rơi một cái ô thẳng đứng.<br/>B. Thả tờ giấy vo tròn xuống đất từ độ cao 2 m.<br/>C. Gập tờ giấy thành hình cái thuyền rồi thả xuống đất từ độ cao 2 m.<br/>D. Gập tờ giấy thành hình cái máy bay rồi thả xuống đất từ độ cao 2 m.</li>
+      <li>Tại sao yên xe đạp thể thao thường cao hơn ghi – đông?<br/>A. Vì khi đó tư thế vận động viên cúi xuống giúp giảm lực cản không khí.<br/>B. Vì nó phù hợp với kiểu dáng của xe.<br/>C. Giúp cho người điều khiển dễ điều khiển xe.<br/>D. Giữ được tốc độ ổn định.</li>
+      <li>Trong các lực sau, có bao nhiêu lực là nguyên nhân khiến đám mây có khối lượng hàng chục tấn không rơi xuống mà lơ lửng ở trên cao?<br/>(I) lực đẩy Archimedes của hơi nước.<br/>(II) lực cản của không khí.<br/>(III) lực đẩy Archimedes của không khí.<br/>(IV) trọng lực.<br/>A. 1. B. 2. C. 3. D. 4.</li>
+      <li>Trong thực tế, mọi vật rơi luôn chịu lực cản của không khí. Với vật nặng kích thước nhỏ (ví dụ viên bi thép), lực cản này có độ lớn không đáng kể và có thể bỏ qua. Nhưng với các vật kích thước lớn (ví dụ dù lượn), lực cản của không khí có độ lớn đáng kể. Khi đó, chuyển động của vật rơi có những tính chất gì?<br/>A. Vận tốc của vật tăng dần nhưng tăng ngày càng chậm, tiến tới một giá trị không đổi. <br/>B. Vận tốc của vật tăng dần và vật rơi nhanh dần. <br/>C. Vận tốc của vật không thay đổi, vật rơi như cũ. <br/>D. Vận tốc của vật giảm dần và vật đổi chiều chuyển động.</li>
+      <li>Khẳng định nào sau đây là đúng? Nếu bỏ qua sự thay đổi của gia tốc trọng trường, khi thả một viên bi rơi vào một cốc nước thì càng xuống sâu<br/>A. độ lớn lực đẩy Archimedes càng tăng, áp suất tác dụng lên viên bi càng giảm.<br/>B. độ lớn lực đẩy Archimedes không đổi, áp suất tác dụng lên viên bi càng tăng.<br/>C. độ lớn lực đẩy Archimedes càng giảm, áp suất tác dụng lên viên bi càng tăng.<br/>D. độ lớn lực đẩy Archimedes càng giảm, áp suất tác dụng lên viên bi càng giảm.</li>
+      <li>Có hai vật: vật M bằng sắt, vật N bằng nhôm có cùng khối lượng. Hai vật này treo vào hai đầu của thanh CD (CO = OD), như hình vẽ. Biết khối lượng riêng của sắt lớn hơn khối lượng riêng của nhôm, bỏ qua sự thay đổi gia tốc trọng trường. Nếu nhúng ngập cả hai vật vào trong rượu thì thanh CD sẽ<br/>A. Vẫn cân bằng.<br/>B. Nghiêng về phía bên vật M.<br/>C. Nghiêng về phái bên vật N.<br/>D. Nghiêng về phía thỏi được nhúng sâu hơn trong rượu.</li>
+      <li>Hai thỏi đồng có thể tích bằng nhau, một thỏi được nhúng hoàn toàn vào trong nước, một thỏi được nhúng vào dầu. Thỏi nào chịu lực đẩy Archimedes lớn hơn? Vì sao?<br/>A. Thỏi đồng ở trong dầu chịu lực đẩy Archimedes lớn hơn vì khối lượng riêng của dầu lớn hơn khối lượng riêng của nước.<br/>B. Thỏi đồng ở trong nước chịu lực đẩy Archimedes nhỏ hơn vì khối lượng riêng của nước lớn hơn khối lượng riêng của dầu.<br/>C.Thỏi đồng ở trong nước chịu lực đẩy Archimedes lớn hơn vì khối lượng riêng của nước lớn hơn khối lượng riêng của dầu.<br/>D. Lực đẩy Archimedes tác dụng lên hai thỏi như nhau vì cả hai thỏi cùng chiếm trong chất lỏng một thể tích như nhau.</li>
+      <li>Lực đẩy Archimedes tác dụng lên một vật nhúng trong chất lỏng bằng<br/>A. trọng lượng của vật. B. trọng lượng của chất lỏng.<br/>C. trọng lượng phần chất lỏng bị vật chiếm chỗ. D. trọng lượng của phần vật nằm dưới mặt chất lỏng.</li>
+    </ol>
+
+    <h3>Mức độ VẬN DỤNG</h3>
+    <ol start="31">
+      <li>Một quả cầu bằng sắt có thể tích 4 dm3 được nhúng chìm trong nước, biết khối lượng riêng của nước 1000 kg/m3. Lấy và bỏ qua lực đẩy Archimedes của không khí. Lực đẩy Archimedes tác dụng lên quả cầu có độ lớn là<br/>A. 4000 N. B. 40000 N. C. 2500 N. D. 40 N.</li>
+      <li>Móc một quả nặng vào lực kế ở ngoài không khí, lực kế chỉ 30 N. Bỏ qua lực đẩy Archimedes của không khí. Nhúng chìm quả nặng đó vào trong nước số chỉ của lực kế sẽ<br/>A. tăng lên. B. giảm đi. C. không thay đổi. D. chỉ số 0.</li>
+      <li>Một quả cầu bằng sắt treo vào 1 lực kế ở ngoài không khí lực kế chỉ 1,7 N. Nhúng chìm quả cầu vào nước thì lực kế chỉ 1,2 N. Bỏ qua lực đẩy Archimedes của không khí. Lực đẩy Archimedes của nước có độ lớn là<br/>A. 1,7 N. B. 1,2 N. C. 2,9 N. D. 0,5 N.</li>
+      <li>Một vật móc vào một lực kế treo ngoài không khí thì lực kế chỉ 2,13 N. Khi nhúng chìm vật vào trong nước lực kế chỉ 1,83 N. Biết trọng lượng riêng của nước là 10000 N/m3 và bỏ qua lực đẩy Archimedes của không khí. Thể tích của vật là<br/>A. 213 cm3. B. 183 cm3. C. 30 cm3. D. 396 cm3.</li>
+      <li>Một quả cầu bằng đồng được treo vào lực kế thì lực kế chỉ 4,45 N. Biết trọng lượng riêng của rượu và đồng lần lượt là 8000 N/m3 và 89000 N/m3. Bỏ qua lực đẩy Archimedes của không khí. Nhúng chìm quả cầu vào rượu thì lực kế chỉ<br/>A. 4,45 N. B. 4,25 N. C. 4,15 N. D. 4,05 N.</li>
+      <li>Một vật có thể tích 0,1 m3 và trọng lượng 2500 N. Biết trọng lượng riêng của nước 10000 kg/m3. Bỏ qua lực đẩy Archimedes của không khí. Để giữ vật cân bằng trong nước phải tác dụng lên vật một lực có phương thẳng đứng hướng từ dưới lên trên và có độ lớn là<br/>A. 2500 N. B. 1000 N. C. 1500 N. D. 3000 N.</li>
+      <li>Treo một vật nặng có thể tích 0,5 dm3 vào đầu của lực kế rồi nhúng ngập vào trong nước, khi đó lực kế chỉ giá trị 5 N. Biết trọng lượng riêng của nước là 10000 N/m3 và bỏ qua lực đẩy Archimedes của không khí. Trọng lượng của vật nặng là<br/>A. 10 N. B. 5,5 N. C. 5 N. D. 0,1 N.</li>
+      <li>Một vật bằng gỗ lơ lửng trên nước, phần chìm trong nước có thể tích 2 dm3. Bỏ qua lực đẩy Archimedes của không khí. Hỏi thể tích miếng gỗ là bao nhiêu biết trọng lượng riêng của nước và gỗ lần lượt là 10000 N/m3 và 8000 N/m3?<br/>A. 2 dm3. B. 2,5 dm3. C. 1,6 dm3. D. 4 dm3.</li>
+      <li>Một vật có dạng hình hộp chữ nhật có kích thước là và khối lượng riêng là 550 kg/m3. Thả vật vào chất lỏng có khối lượng riêng là 1360 kg/m3. Chiều cao phần nhô lên khỏi mặt chất lỏng của vật gần nhất với giá trị nào sau đây?<br/>A. 2 cm. B. 3 cm. C. 3,5 cm. D. 2,2 cm.</li>
+      <li>Một vật có dạng hình hộp chữ nhật có chiều cao là 4 cm và khối lượng riêng là 550 kg/m3 được thả vào chất lỏng. Biết chiều cao phần vật chìm vào chất lỏng bằng chiều cao phần nhô lên trên chất lỏng. Khối lượng riêng của chất lỏng là<br/>A. 1360 kg/m3. B. 1250 kg/m3. C. 1070 kg/m3. D. 1100 kg/m3.</li>
+      <li>Một tảng băng trôi trên một ly nước có mực nước nào đó. Khi băng tan hết thành nước, hiện tượng xảy ra là<br/>A. mực nước tăng, thể tích nước tăng bằng thể tích phần nổi của băng. <br/>B. mực nước giảm, thể tích nước giảm đi bằng thể tích phần nổi của băng. <br/>C. mực nước tăng, thể tích nước tăng ra bằng tổng thể tích của băng. <br/>D. mực nước không thay đổi.</li>
+    </ol>
+
+    <h3>PHẦN II. Câu trắc nhiệm đúng sai</h3>
+    <p><strong>Câu 1.</strong> Xác định nhận định sau đây đúng hay sai khi thả một vật rơi trong chất lỏng?</p>
+    <p>Phát biểu &nbsp;&nbsp; Đúng &nbsp;&nbsp; Sai</p>
+    <p>a) Lực đẩy Archimedes tác dụng theo mọi phương vì chất lỏng gây áp suất theo mọi phương.</p>
+    <p>b) Chuyển động của vật nhanh dần không đều từ lúc bắt đầu rơi trong một khoảng thời gian ngắn.</p>
+    <p>c) Vật chỉ chịu tác dụng của trọng lực và lực đẩy Archimedes trong suốt quá trình rơi.</p>
+    <p>d) Nếu có tác nhân làm tăng lực cản khi vật chuyển động thì vật sẽ chuyển động chậm dần rồi dừng lại và lơ lửng trong chất lỏng.</p>
+
+    <p><strong>Câu 2.</strong> Một vật làm bằng sắt và một vật làm bằng hợp kim có cùng khối lượng được nhúng vào cùng một chất lỏng. Biết khối lượng riêng của sắt, hợp kim và nước lần lượt là 7874 N/m3, 6750 N/m3 và 1000 kg/m3.</p>
+    <p>Phát biểu &nbsp;&nbsp; Đúng &nbsp;&nbsp; Sai</p>
+    <p>a) Trọng lực tác dụng lên hai vật là như nhau.</p>
+    <p>b) Cả hai vật đều chịu tác dụng của lực đẩy Archimedes đặt tại tâm mỗi vật và ngược chiều trọng lực.</p>
+    <p>c) Thể tích của vật làm bằng sắt lớn hơn thể tích của vật làm bằng hợp kim.</p>
+    <p>d) Lực đẩy Archimedes tác dụng lên vật làm bằng sắt gấp 2 lần lực đẩy Archimedes tác dụng lên vật làm bằng hợp kim.</p>
+
+    <p><strong>Câu 3.</strong> Hình dưới biểu diễn quả tennis đang rơi thẳng đứng trong không khí. Trong quá trình rơi, quả tennis chỉ chịu tác dụng bởi hai lực như hình vẽ. Biết khối lượng quả tennis là 56 g. Biết lực có độ lớn là 0,2 N và gia tốc trọng trường</p>
+    <p>Phát biểu &nbsp;&nbsp; Đúng &nbsp;&nbsp; Sai</p>
+    <p>a) Lực  cản trở chuyển động của quả tennis.</p>
+    <p>b) Lực có độ lớn nhỏ hơn trọng lực.</p>
+    <p>c) Chuyển động của quả tennis là chuyển động rơi tự do.</p>
+    <p>d) Gia tốc của quả tennis khoảng 6,23 m/s2.</p>
+
+    <p><strong>Câu 4.</strong> Một vật nặng 3600 g có khối lượng riêng bằng 1800 kg/m3. Khi được thả vào chất lỏng có khối lượng riêng bằng 850 kg/m3, vật hoàn toàn nằm dưới mặt chất lỏng. Lấy</p>
+    <p>Phát biểu &nbsp;&nbsp; Đúng &nbsp;&nbsp; Sai</p>
+    <p>a) Vật chịu tác dụng đồng thời của trọng lực và lực nâng của chất lỏng cùng phương, cùng chiều với nhau.</p>
+    <p>b) Lực nâng của chất lỏng có độ lớn nhỏ hơn trọng lực.</p>
+    <p>c) Thể tích phần chất lỏng bị vật chiếm chỗ là 2 dm3.</p>
+    <p>d) Lực đẩy chất lỏng tác dụng lên vật có độ lớn đúng bằng 170 N.</p>
+
+    <p><strong>Câu 5.</strong> Một khối gỗ hình lập phương có cạnh 40 cm được thả nổi trong nước thì thấy chiều cao khối gỗ nổi trên mặt nước là 5 cm. Sau đó, người ta đổ thêm vào nước lượng dầu sao cho vật bị ngập hoàn toàn. Dầu và nước tách thành hai lớp riêng biệt (dầu không tan không nước) như hình dưới. Biết khối lượng riêng của nước và dầu lần lượt là 1000 kg/m3 và 800 kg/m3.</p>
+    <p>Phát biểu &nbsp;&nbsp; Đúng &nbsp;&nbsp; Sai</p>
+    <p>a) Khi thả khối gỗ vào nước, khối gỗ chịu tác dụng của lực đẩy Archimedes của nước và lực này đặt tại tâm khối gỗ.</p>
+    <p>b) Sau khi đổ thêm dầu, khối gỗ không còn chịu tác dụng của lực đẩy Archimedes của nước.</p>
+    <p>c) Khối lượng của khối gỗ là 875 kg/m3.</p>
+    <p>d) Tỉ lệ chiều cao vật chìm trong dầu và nước là 2.</p>
+
+    <p><strong>Câu 6.</strong> Một miếng hợp kim gồm 35,4% vàng, còn lại là đồng. Khi miếng hợp kim được treo vào một lực kế trong không khí thì thấy lực kế chỉ 0,576 N. Biết rằng khối lượng riêng của nước là 1000 kg/m3, của vàng là 19,3.103 kg/m3, của đồng là 8900 kg/m3. Lấy </p>
+    <p>Phát biểu &nbsp;&nbsp; Đúng &nbsp;&nbsp; Sai</p>
+    <p>a) Khi miếng hợp kim được treo vào một lực kế trong không khí thì số chỉ của lực kế chính bằng tổng trọng lượng của vàng và trọng lượng của đồng có trong hợp kim.</p>
+    <p>b) Thể tích miếng hợp kím xấp xỉ bằng 52,4 cm3.</p>
+    <p>c) Số chỉ của lực kế khi nhúng miếng hợp kim ngập trong nước khoảng 0,52 N.</p>
+    <p>d) Nếu hợp kim có tỉ lệ vàng và đồng bằng nhau nhưng kích thước không đổi thì số chỉ lực kế khi nhúng hợp kim vào nước sẽ tăng khoảng 0,02 N.</p>
+    
+  </main>
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chương 1 - Bài 3: Thực Hành Tính Sai Số</title>
+        <link href="https://fonts.googleapis.com/css2?family=Asap:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../../../css.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="chapter-title">CHƯƠNG 1. MỞ ĐẦU</div>
+        <div class="lesson-title">BÀI 3: THỰC HÀNH TÍNH SAI SỐ TRONG PHÉP ĐO. GHI KẾT QUẢ ĐO</div>
+
+        <div class="section-title">I. TÓM TẮT KIẾN THỨC TRỌNG TÂM</div>
+
+        <div class="subsection-title">1. Hệ Đơn Vị SI, Đơn Vị Cơ Bản Và Đơn Vị Dẫn Xuất</div>
+        
+        <div class="content">
+            <div class="key-point">
+                Trong khoa học có rất nhiều đơn vị được sử dụng, trong đó thông dụng nhất là <span class="highlight">hệ đơn vị đo lường quốc tế SI (Système International d'unités)</span> được xây dựng trên cơ sở của <span class="highlight">7 đơn vị cơ bản</span>.
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr style="background-color: #c3e9f5;">
+                            <th>STT</th>
+                            <th>Đơn Vị</th>
+                            <th>Kí Hiệu</th>
+                            <th>Đại Lượng</th>
+                            <th>Kí Hiệu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mét</td>
+                            <td class="math">m</td>
+                            <td>Chiều dài</td>
+                            <td class="math">l</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Kilôgam</td>
+                            <td class="math">kg</td>
+                            <td>Khối lượng</td>
+                            <td class="math">m</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Giây</td>
+                            <td class="math">s</td>
+                            <td>Thời gian</td>
+                            <td class="math">t</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Kelvin</td>
+                            <td class="math">K</td>
+                            <td>Nhiệt độ</td>
+                            <td class="math">T</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Ampe</td>
+                            <td class="math">A</td>
+                            <td>Cường độ dòng điện</td>
+                            <td class="math">I</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Mol</td>
+                            <td class="math">mol</td>
+                            <td>Lượng chất</td>
+                            <td class="math">n</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Candela</td>
+                            <td class="math">cd</td>
+                            <td>Cường độ ánh sáng</td>
+                            <td class="math">I<sub>v</sub></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="margin-left: 20px; font-style: italic; font-size: 14px;">Bảng 3.1: Các đơn vị cơ bản trong hệ SI</p>
+
+            <div class="key-point" style="margin-top: 15px;">
+                Ngoài 7 đơn vị cơ bản, những đơn vị còn lại được gọi là <span class="highlight">đơn vị dẫn xuất</span>. Mỗi đơn vị dẫn xuất có thể phân tích thành các đơn vị cơ bản dựa vào mối liên hệ giữa các đại lượng tương ứng.
+            </div>
+
+            <div class="table-container" style="margin-top: 15px;">
+                <table>
+                    <thead>
+                        <tr style="background-color: #ffe0b2;">
+                            <th colspan="4">Bảng 3.2: Tên và kí hiệu tiếp đầu ngữ của bội số, ước số thập phân</th>
+                        </tr>
+                        <tr style="background-color: #ffe0b2;">
+                            <th>Bội Số</th>
+                            <th>Kí Hiệu</th>
+                            <th>Hệ Số</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Yotta</td>
+                            <td class="math">Y</td>
+                            <td class="math">10<sup>24</sup></td>
+                            <td rowspan="12" style="text-align: center; font-weight: bold; vertical-align: middle;">Ước Số</td>
+                        </tr>
+                        <tr>
+                            <td>Zetta</td>
+                            <td class="math">Z</td>
+                            <td class="math">10<sup>21</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Eta</td>
+                            <td class="math">E</td>
+                            <td class="math">10<sup>18</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Peta</td>
+                            <td class="math">P</td>
+                            <td class="math">10<sup>15</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Tera</td>
+                            <td class="math">T</td>
+                            <td class="math">10<sup>12</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Giga</td>
+                            <td class="math">G</td>
+                            <td class="math">10<sup>9</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Mega</td>
+                            <td class="math">M</td>
+                            <td class="math">10<sup>6</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Kilo</td>
+                            <td class="math">k</td>
+                            <td class="math">10<sup>3</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Hecto</td>
+                            <td class="math">h</td>
+                            <td class="math">10<sup>2</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Deka</td>
+                            <td class="math">da</td>
+                            <td class="math">10<sup>1</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Deci</td>
+                            <td class="math">d</td>
+                            <td class="math">10<sup>-1</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Centi</td>
+                            <td class="math">c</td>
+                            <td class="math">10<sup>-2</sup></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="subsection-title">2. Thứ Nguyên</div>
+        
+        <div class="content">
+            <div class="key-point">
+                <span class="highlight">Thứ nguyên của một đại lượng</span> là quy luật nêu lên sự phụ thuộc của đơn vị đo đại lượng đó vào các đơn vị cơ bản. Được biểu diễn dưới dạng <span class="math">[X]</span>.
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr style="background-color: #c8e6c9;">
+                            <th colspan="2">Bảng 3.3: Thứ Nguyên Của Một Số Đại Lượng Cơ Bản</th>
+                        </tr>
+                        <tr style="background-color: #c8e6c9;">
+                            <th>Đại Lượng Cơ Bản</th>
+                            <th>Thứ Nguyên</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Chiều dài</td>
+                            <td class="math">[L]</td>
+                        </tr>
+                        <tr>
+                            <td>Khối lượng</td>
+                            <td class="math">[M]</td>
+                        </tr>
+                        <tr>
+                            <td>Thời gian</td>
+                            <td class="math">[T]</td>
+                        </tr>
+                        <tr>
+                            <td>Cường độ dòng điện</td>
+                            <td class="math">[I]</td>
+                        </tr>
+                        <tr>
+                            <td>Nhiệt độ</td>
+                            <td class="math">[K]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="warning-box" style="margin-top: 15px;">
+                <strong>⚠ Lưu ý quan trọng trong các biểu thức vật lí:</strong>
+                <div class="sub-content">
+                    <div class="list-item">• Các số hạng trong phép cộng (hoặc trừ) <span class="highlight">phải có cùng thứ nguyên</span></div>
+                    <div class="list-item">• Hai vế của một biểu thức vật lí <span class="highlight">phải có cùng thứ nguyên</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="subsection-title">3. Các Phép Đo Trong Vật Lí</div>
+        
+        <div class="content">
+            <div class="key-point">
+                <span class="highlight">Phép đo các đại lượng vật lí</span> là phép so sánh chúng với đại lượng cùng loại được quy ước làm đơn vị.
+            </div>
+
+            <div class="step-box">
+                <strong>📌 Phép đo trực tiếp:</strong>
+                <div class="sub-content">
+                    Giá trị của đại lượng cần đo được <span class="highlight">đọc trực tiếp trên dụng cụ đo</span>.
+                    <div class="list-item" style="margin-top: 8px;"><strong>Ví dụ:</strong> Đo khối lượng bằng cân, đo thể tích bằng bình chia độ, đo chiều dài bằng thước kẻ</div>
+                </div>
+            </div>
+
+            <div class="step-box">
+                <strong>📌 Phép đo gián tiếp:</strong>
+                <div class="sub-content">
+                    Giá trị của đại lượng cần đo được <span class="highlight">xác định thông qua các đại lượng được đo trực tiếp</span>.
+                    <div class="list-item" style="margin-top: 8px;"><strong>Ví dụ:</strong> Đo khối lượng riêng, đo diện tích, đo thể tích hình chóp</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="subsection-title">4. Các Loại Sai Số Của Phép Đo</div>
+        
+        <div class="content">
+            <div class="subsection-title" style="margin-left: 0; margin-top: 10px;">a. Sai Số Hệ Thống</div>
+            
+            <div class="warning-box">
+                <strong>Định nghĩa:</strong> Sai số hệ thống là sai số có <span class="highlight">tính quy luật và được lặp lại ở tất cả các lần đo</span>. Làm cho giá trị đo tăng hoặc giảm một lượng nhất định so với giá trị thực.
+                
+                <div class="sub-content" style="margin-top: 10px;">
+                    <strong>Nguyên nhân:</strong>
+                    <div class="list-item">• Xuất phát từ dụng cụ đo (không hiệu chỉnh dụng cụ về đúng số 0)</div>
+                    <div class="list-item">• Xuất phát từ độ chia nhỏ nhất của dụng cụ đo (gọi là <span class="highlight">sai số dụng cụ</span>, thường bằng <span class="highlight">một nửa độ chia nhỏ nhất</span>)</div>
+                </div>
+
+                <div class="sub-content" style="margin-top: 10px;">
+                    <strong>Cách hạn chế:</strong>
+                    <div class="list-item">✓ Hiệu chỉnh dụng cụ trước khi đo</div>
+                    <div class="list-item">✓ Lựa chọn dụng cụ đo phù hợp</div>
+                    <div class="list-item">✓ Thao tác đo đúng cách</div>
+                </div>
+            </div>
+
+            <div class="subsection-title" style="margin-left: 0; margin-top: 15px;">b. Sai Số Ngẫu Nhiên</div>
+            
+            <div class="warning-box">
+                <strong>Định nghĩa:</strong> Sai số ngẫu nhiên là sai số xuất phát từ <span class="highlight">sai xót, phản xạ của người làm thí nghiệm</span> hoặc từ những <span class="highlight">yếu tố ngẫu nhiên bên ngoài</span>. Dẫn đến sự phân tán của các kết quả đo xung quanh một giá trị trung bình.
+                
+                <div class="sub-content" style="margin-top: 10px;">
+                    <strong>Đặc điểm:</strong>
+                    <div class="list-item">• Có nguyên nhân không rõ ràng</div>
+                    <div class="list-item">• Gây sự phân tán của số liệu đo</div>
+                </div>
+
+                <div class="sub-content" style="margin-top: 10px;">
+                    <strong>Cách hạn chế:</strong>
+                    <div class="list-item">✓ Thực hiện phép đo <span class="highlight">nhiều lần</span></div>
+                    <div class="list-item">✓ Lấy <span class="highlight">giá trị trung bình</span> để hạn chế sự phân tán</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="subsection-title">5. Cách Biểu Diễn Sai Số Của Phép Đo</div>
+        
+        <div class="content">
+            <div class="step-box">
+                <strong>Bước 1: Tính Giá Trị Trung Bình</strong>
+                <div class="formula-box">
+                    Ā = (A₁ + A₂ + ... + Aₙ) / n
+                </div>
+                <div class="sub-content">
+                    Trong đó: Ā là giá trị trung bình, Aᵢ là giá trị đo lần thứ i, n là số lần đo
+                </div>
+            </div>
+
+            <div class="step-box">
+                <strong>Bước 2: Tính Sai Số Tuyệt Đối Ứng Với Mỗi Lần Đo</strong>
+                <div class="formula-box">
+                    ΔAᵢ = Ā - Aᵢ
+                </div>
+                
+                <div class="sub-content" style="margin-top: 10px;">
+                    <strong>Sai số tuyệt đối trung bình của n lần đo:</strong>
+                    <div class="formula-box">
+                        ΔA = (ΔA₁ + ΔA₂ + ... + ΔAₙ) / n
+                    </div>
+                </div>
+
+                <div class="sub-content" style="margin-top: 10px;">
+                    <strong>Sai số tuyệt đối của phép đo:</strong>
+                    <div class="formula-box">
+                        ΔA = ΔA + ΔA<sub>dc</sub>
+                    </div>
+                    <p style="font-size: 14px; margin: 8px 0;">
+                        Trong đó <span class="math">ΔA<sub>dc</sub></span> là sai số dụng cụ, thường bằng <span class="highlight">một nửa độ chia nhỏ nhất</span> của dụng cụ (thước kẻ, cân bàn, bình chia độ,...)
+                    </p>
+                </div>
+            </div>
+
+            <div class="step-box">
+                <strong>Bước 3: Cách Ghi Giá Trị Đại Lượng Vật Lí</strong>
+                <div class="formula-box">
+                    A = Ā ± ΔA
+                </div>
+                <div class="sub-content">
+                    Giá trị A của một đại lượng vật lí được ghi dưới dạng này để biểu diễn khoảng giá trị có thể có của đại lượng.
+                </div>
+            </div>
+
+            <div class="step-box">
+                <strong>Bước 4: Sai Số Tương Đối (Tỉ Đối)</strong>
+                <div class="formula-box">
+                    δA = (ΔA / Ā) × 100%
+                </div>
+                <div class="sub-content">
+                    <p style="margin-top: 8px;"><span class="highlight">Sai số tương đối cho biết mức độ chính xác của phép đo.</span> Sai số tương đối càng nhỏ, phép đo càng chính xác.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subsection-title">6. Nguyên Tắc Xác Định Sai Số Trong Phép Đo Gián Tiếp</div>
+        
+        <div class="content">
+            <div class="step-box">
+                <strong>Nguyên tắc 1: Sai Số Tuyệt Đối Của Tổng Hay Hiệu</strong>
+                <div class="formula-box">
+                    Nếu F = x ± y ± z ... thì
+                    <br>
+                    ΔF = Δx + Δy + Δz + ...
+                </div>
+                <div class="sub-content">
+                    Sai số tuyệt đối của một tổng hay hiệu bằng <span class="highlight">tổng sai số tuyệt đối</span> của các số hạng.
+                </div>
+            </div>
+
+            <div class="step-box">
+                <strong>Nguyên tắc 2: Sai Số Tương Đối Của Tích Hoặc Thương</strong>
+                <div class="formula-box">
+                    Nếu F = x<sup>m</sup> × y<sup>n</sup> × z<sup>k</sup> ... thì
+                    <br>
+                    δF = m × δx + n × δy + k × δz + ...
+                </div>
+                <div class="sub-content">
+                    Sai số tương đối của một tích hoặc thương bằng <span class="highlight">tổng sai số tương đối</span> của các thừa số (nhân với hệ số lũy thừa tương ứng).
+                </div>
+            </div>
+
+            <div class="step-box">
+                <strong>Chữ Số Có Nghĩa</strong>
+                <div class="sub-content">
+                    Chữ số có nghĩa gồm:
+                    <div class="list-item">• Các chữ số khác 0</div>
+                    <div class="list-item">• Các chữ số 0 nằm giữa hai chữ số khác 0</div>
+                    <div class="list-item">• Các chữ số 0 nằm bên phải dấu thập phân và bên trái một chữ số khác không</div>
+                </div>
+            </div>
+
+            <div class="step-box">
+                <strong>Quy Ước Viết Giá Trị</strong>
+                <div class="sub-content">
+                    <div class="list-item">• Sai số tuyệt đối <span class="math">ΔA</span> thường được viết đến <span class="highlight">một hoặc hai chữ số có nghĩa</span></div>
+                    <div class="list-item">• Giá trị trung bình <span class="math">Ā</span> được viết đến <span class="highlight">bậc thập phân tương ứng</span></div>
+                </div>
+                
+                <div class="example-box" style="margin-top: 10px;">
+                    <strong>Ví dụ 1:</strong> s = 1,52723 m; Δs = 0,002 m
+                    <br>
+                    <strong>Viết:</strong> s = (1,527 ± 0,002) m
+                </div>
+            </div>
+
+            <div class="step-box">
+                <strong>Quy Tắc Làm Tròn Kết Quả Tính Toán</strong>
+                <div class="sub-content">
+                    Khi thực hiện các phép tính, phải đảm bảo rằng <span class="highlight">kết quả cuối cùng có cùng số chữ số có nghĩa với số có ít chữ số có nghĩa nhất</span> được sử dụng trong phép tính.
+                </div>
+                
+                <div class="example-box" style="margin-top: 10px;">
+                    <strong>Ví dụ 2:</strong> Tích của các độ dài 12,5 m; 16 m và 15,88 m
+                    <br>
+                    <strong>Giải thích:</strong> Số 16 m có 2 chữ số có nghĩa (ít nhất)
+                    <br>
+                    <strong>Kết quả:</strong> V = 12,5 × 16 × 15,88 = 3170,4 m³ ≈ <span class="highlight">3,2 × 10³ m³</span>
+                    <br>
+                    (Làm tròn để có 2 chữ số có nghĩa)
+                </div>
+            </div>
+        </div>
+
+        <hr style="margin: 30px 0; border: none; border-top: 2px solid #ccc;">
+
+        <div style="margin: 20px; padding: 15px; background-color: #fff3e0; border-left: 4px solid #e65100; border-radius: 4px; font-size: 14px; line-height: 1.8;">
+            <strong>📌 GHI NHỚ QUAN TRỌNG:</strong>
+            <div style="margin-top: 10px;">
+                <div class="list-item">• Luôn thực hiện phép đo nhiều lần để giảm sai số ngẫu nhiên</div>
+                <div class="list-item">• Hiệu chỉnh dụng cụ trước khi sử dụng để giảm sai số hệ thống</div>
+                <div class="list-item">• Viết kết quả đo phải kèm theo sai số và đơn vị</div>
+                <div class="list-item">• Chú ý đến số chữ số có nghĩa trong các phép tính</div>
+            </div>
+        </div>
+
+    </body>
+</html>

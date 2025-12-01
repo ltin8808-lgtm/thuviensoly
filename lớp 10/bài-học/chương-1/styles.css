@@ -1,0 +1,245 @@
+/* Chương 1 - Bài 1, 2, 3 Common Styles */
+
+/* ===== TIÊU ĐỀ ===== */
+.chapter-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #333;
+}
+
+.lesson-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #555;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0 10px 0;
+    color: #222;
+    background-color: #f0f0f0;
+    padding: 8px;
+}
+
+.subsection-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 12px 0 8px 20px;
+    color: #333;
+}
+
+/* ===== NỘI DUNG ===== */
+.content {
+    margin-left: 20px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.sub-content {
+    margin-left: 40px;
+}
+
+.list-item {
+    margin: 8px 0;
+}
+
+/* ===== HIGHLIGHT VÀ STYLE CHỮ ===== */
+.highlight {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.highlight-blue {
+    color: #1565c0;
+    font-weight: bold;
+}
+
+.math {
+    font-family: 'Courier New', monospace;
+    background-color: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* ===== HỘP THÔNG TIN ===== */
+.key-point {
+    background-color: #fffbea;
+    border-left: 4px solid #ffb81c;
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 4px;
+}
+
+.definition-box {
+    background-color: #e3f2fd;
+    border-left: 4px solid #1976d2;
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 4px;
+}
+
+.formula-box {
+    background-color: #f3e5f5;
+    border-left: 4px solid #7b1fa2;
+    padding: 12px;
+    margin: 10px 20px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+.note-box {
+    background-color: #e8f5e9;
+    border-left: 4px solid #388e3c;
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 4px;
+}
+
+.step-box {
+    background-color: #f3e5f5;
+    border-left: 4px solid #7b1fa2;
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 4px;
+}
+
+.example-box {
+    background-color: #e8f5e9;
+    border-left: 4px solid #388e3c;
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 4px;
+}
+
+.warning-box {
+    background-color: #ffe0e0;
+    border-left: 4px solid #d32f2f;
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 4px;
+}
+
+.success-box {
+    background-color: #e8f5e9;
+    border-left: 4px solid #4caf50;
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 4px;
+}
+
+.vector-box {
+    background-color: #fce4ec;
+    border-left: 4px solid #c2185b;
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 4px;
+}
+
+/* ===== STYLE CHO NÚT / LABELS ===== */
+.must-do {
+    background-color: #c8e6c9;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+.must-not {
+    background-color: #ffcdd2;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #b71c1c;
+}
+
+/* ===== BẢNG ===== */
+.table-container {
+    margin: 15px 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 20px;
+}
+
+.comparison-table th,
+.comparison-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.comparison-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.comparison-table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* ===== PHÂN TÁCH ===== */
+hr {
+    margin: 30px 0;
+    border: none;
+    border-top: 2px solid #ccc;
+}
+
+/* ===== GHI NHỚ / KẾT LUẬN ===== */
+.remember-box {
+    margin: 20px;
+    padding: 15px;
+    background-color: #fff3e0;
+    border-left: 4px solid #e65100;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ===== HÌNH MINH HỌA VÀ GHI CHÚ NHỎ ===== */
+.figure-placeholder {
+    width: 80%;
+    height: 160px;
+    margin: 12px auto;
+    border: 2px dashed #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    background: #fafafa;
+}
+
+.small-note {
+    font-size: 13px;
+    color: #666;
+    margin-left: 20px;
+}

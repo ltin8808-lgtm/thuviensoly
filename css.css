@@ -3,6 +3,7 @@
          font-weight: 400;
          line-height: 1.45;
          
+<<<<<<< HEAD
            }
 
 /* Remove underlines from all links */
@@ -43,11 +44,19 @@ body{
                 justify-content: space-between;
             }
             .nav {
+=======
+            }
+            .nav {
+                color: #023A5A;
+                display: flex;
+                justify-content: space-between;
+>>>>>>> d0b74648760dd8df3adec4cc9a7d3ce5b144ef83
                 flex-wrap: wrap;
                 gap: 20px;
             }
             .nav2 {
                 margin: 25px;
+<<<<<<< HEAD
             }
             .nav4 {
                 color: var(--accent);
@@ -104,12 +113,62 @@ body{
                 color: #023A5A;
                 list-style: none;
                 display: inline-block;
+=======
+                color: #023A5A;
+                display: flex;
+                justify-content: space-between;
+            }
+            .nav3 {
+                color: #023A5A;
+                display: flex;
+                justify-content: space-between;
+            }
+            .nav4 {
+                color: #023A5A;
+                display: flex;
+                justify-content: left;
+            }
+            .nav-item{
+                font-family: inherit;
+                color: #023A5A;
+                padding-left: 0;
+                margin:auto 36px;
+            }
+            .nav-item2{
+                font-family: inherit;
+                color: #023A5A;
+                padding-left: 0;
+                margin:auto 36px;
+                margin-top: -5px;
+            }
+            .nav-list{ 
+                font-family: inherit;
+                color: #023A5A;
+                list-style: none;
+                margin: 0 8px;
+                display:inline-block;
+                font-size: 1.5rem ;
+            }
+            .nav-list2{ 
+                font-family: inherit;
+                color: #023A5A;
+                margin-top:0px;
+                padding:0;
+                font-size: 2rem ;
+            }
+             .nav-list3{ 
+                font-family: inherit;
+                color: #023A5A;
+                list-style: none;
+                display:inline-block;
+>>>>>>> d0b74648760dd8df3adec4cc9a7d3ce5b144ef83
                 margin: 50px;
                 padding: 20px;
                 font-size: 2.5rem;
                 border: 2px solid #023A5A;
                 border-radius: 10px;
             }
+<<<<<<< HEAD
             /* Paragraph / text sizes */
             .p {
                 font-family: inherit;
@@ -120,16 +179,49 @@ body{
                 font-family: inherit;
             }
             .p2 {
+=======
+            .nav-list4{ 
+                font-family: inherit;
+                color: #023A5A;
+                list-style: none;
+                display:inline-block;
+                margin: 0 8px;
+                font-size: 2rem ;
+            }
+            .nav-list5{ 
+                font-family: inherit;
+                color: #023A5A;
+                margin-top:0px;
+                padding:0;
+                font-size: 1.5rem ;
+            }
+            .p{
+                font-family: inherit;
+                font-size: 2.5rem;
+            }
+            .p2{
+                font-family: inherit;
+>>>>>>> d0b74648760dd8df3adec4cc9a7d3ce5b144ef83
                 font-size: 6rem;
                 margin-top: 50px;
                 margin-bottom: -70px;
             }
+<<<<<<< HEAD
             .p3 {
                 font-size: 4rem;
                 margin-top: 0;
                 margin-bottom: -110px;
                 margin-left: 150px;
             }
+=======
+            .p3{
+                font-family: inherit;
+                font-size: 4rem;
+                margin-top: 0px;
+                margin-bottom: -110px;
+                margin-left: 150px;
+             }
+>>>>>>> d0b74648760dd8df3adec4cc9a7d3ce5b144ef83
             .span{
                 font-family: inherit;
                 font-size: 50px;
@@ -174,6 +266,7 @@ body{
                 height: auto;
                 display: block;
             }
+<<<<<<< HEAD
             /* Image sizes */
             .img {
                 width: 450px;
@@ -192,6 +285,21 @@ body{
                 height: 120px;
                 border-radius: 8px;
                 background: transparent;
+=======
+            .img{
+                width:450px;
+                height:350px;
+             }
+            .img2{
+                width: 120px;
+                height: 120px;
+                object-fit: contain;
+            }
+            .img3{
+                width: 170px;
+                height: 170px;
+                object-fit: contain;
+>>>>>>> d0b74648760dd8df3adec4cc9a7d3ce5b144ef83
             }
             .top{
                 margin-top: 0px;
@@ -200,6 +308,7 @@ body{
 /*javasprit*/
             .item .content {
                 display: none; /* ẩn nội dung */
+<<<<<<< HEAD
                 padding: 12px;
                 background: var(--card);
                 box-shadow: 0 6px 14px rgba(15, 23, 30, 0.04);
@@ -214,6 +323,17 @@ body{
                 font-size: 1.6rem ;
                 background: transparent;
                 border-radius: 8px;
+=======
+                padding: 10px;
+                background: #f0f0f0;
+            }
+            .title{
+                font-family: inherit;
+                color: #023A5A;
+                margin-top:0px;
+                padding:0;
+                font-size: 2rem ;
+>>>>>>> d0b74648760dd8df3adec4cc9a7d3ce5b144ef83
             }
             .item.active .content {
                display: block; /* hiện nội dung khi active */
@@ -232,6 +352,7 @@ body{
             .content li a{
                 display: block; /* makes the whole row clickable */
                 text-decoration: none; /* remove underline */
+<<<<<<< HEAD
                 color: var(--muted); /* keep readable color */
                 padding: 12px 16px;
                 border-radius: 10px;
@@ -273,6 +394,14 @@ body{
             /* make sections stand out on larger screens */
             @media (min-width: 900px){
                 section.item.chapter{ display: block; }
+=======
+                color: inherit; /* keep same color as surrounding text */
+                padding: 8px 12px;
+                border-radius: 6px;
+            }
+            .content li a:hover{
+                background: #e9f5fb; /* subtle hover */
+>>>>>>> d0b74648760dd8df3adec4cc9a7d3ce5b144ef83
             }
 
             /* Optional: smaller gap between title and list */

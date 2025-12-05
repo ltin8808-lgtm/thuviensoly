@@ -1,0 +1,50 @@
+<html lang="vi">
+    <head>
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Chuỗi </title>
+        <link href="https://fonts.googleapis.com/css2?family=Asap:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css.css">
+    </head>
+    <body>
+        <!-- mục mở đầu -->
+         <div class="nav3">
+            <h1 class="p">
+            Thư Viện Số Vật Lý
+            </h1> 
+            <ul class="nav-item">
+               <li class="nav-list4"><a href="index.html"> Trang Chủ </a></li>
+                <li class="nav-list4"><a href="bài-học.html"> Bài Học </a></li>
+                <li class="nav-list4"><a href="luyện-tập.html"> Luyện Đề </a></li>
+                <li class="nav-list4"><a href="chia-sẻ.html"> Chia Sẻ </a></li>
+                <li class="nav-list7 anon-only"><a class="khung2" href="đăng-nhập.html"> Đăng Nhập </a></li>
+                <li class="nav-list6 anon-only"><a class="khung" href="đăng-ký.html"> Đăng Ký </a></li>
+            </ul>
+        </div>
+        <div class="nav5">
+            <img src="https://i.ibb.co/qFXpQ4nN/raw-20.png" class="img4">
+            <h1 class="p4"> GIỮ LỮA HỌC TẬP </h1>
+        </div>
+        <div class="nav5" style=" justify-content:space-evenly; gap:100px; ">
+            <div class="bo">
+                <h1 class="p3"> Số Ngày Truy Cập :</h1>
+                <div class="nav6">
+                    <span class="streak-badge">—</span>
+                    <img src="https://i.ibb.co/hxSbmwVZ/raw-21.png" class="img3" alt="streak badge">
+                </div>
+            </div>
+            <div class="bo">
+                <h1 class="p3"> Tổng Thời Gian Học :</h1>
+                <div class="nav6">
+                    <span class="study-badge">0 phút</span>
+                    <img src="https://i.ibb.co/BHJf75Yv/raw-22.png" class="img3" alt="study time badge">
+                </div>
+            </div>
+        </div>
+        </body>
+        <script type="module">
+            import { initStreak, initStudyTimer } from "./main.js";
+            initStreak();
+            try { initStudyTimer(); } catch(e) { console.error('Study timer init failed', e); }
+        </script>
+</html>

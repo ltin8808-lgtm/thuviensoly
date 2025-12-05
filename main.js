@@ -17,6 +17,7 @@ import {
     setDoc,
     updateDoc
 } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+import { onSnapshot } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 // 1) LƯU BÀI CHIA SẺ / DỮ LIỆU
 export async function savePost(text) {
     try {
@@ -81,6 +82,161 @@ export async function renderPosts(containerId) {
     });
 }
 
+// Subscribe to posts in real-time and render into container
+export function subscribeToPosts(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return () => {};
+    const q = query(collection(db, 'posts'), orderBy('createdAt', 'desc'));
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+        container.innerHTML = '';
+        snapshot.forEach(docSnap => {
+            const item = docSnap.data() || {};
+            const div = document.createElement('div');
+            div.className = 'post-item';
+            const time = item.createdAt && item.createdAt.seconds ? new Date(item.createdAt.seconds * 1000).toLocaleString() : (item.createdAt ? new Date(item.createdAt).toLocaleString() : '');
+            div.innerHTML = `
+                <p>${escapeHtml(item.content || '')}</p>
+                <small>${escapeHtml(item.authorName || 'Người dùng')} — ${escapeHtml(time)}</small>
+            `;
+
+            // comments container + form
+            const commentsWrap = document.createElement('div');
+            commentsWrap.className = 'comment-wrap';
+            commentsWrap.innerHTML = `
+                <div class="comment-list" id="comments-for-${docSnap.id}"></div>
+                <form class="comment-form" data-post-id="${docSnap.id}">
+                    <input type="text" name="comment" placeholder="Viết bình luận..." required />
+                    <button type="submit">Bình luận</button>
+                </form>
+            `;
+
+            container.appendChild(div);
+            container.appendChild(commentsWrap);
+
+            // subscribe comments for this post
+            try {
+                subscribeToComments(docSnap.id, `comments-for-${docSnap.id}`);
+            } catch (e) {
+                console.error('subscribeToComments error for', docSnap.id, e);
+            }
+
+            // attach submit handler for comment form (delegated)
+            const form = commentsWrap.querySelector('.comment-form');
+            if (form) {
+                // disable form if user not logged in
+                const inputEl = form.querySelector('input[name="comment"]');
+                const btnEl = form.querySelector('button[type="submit"]');
+                if (!auth.currentUser) {
+                    if (inputEl) inputEl.disabled = true;
+                    if (btnEl) btnEl.disabled = true;
+                    // show login hint
+                    const hint = document.createElement('div');
+                    hint.className = 'comment-login-hint';
+                    hint.innerHTML = 'Vui lòng <a href="đăng-nhập.html">đăng nhập</a> để bình luận.';
+                    commentsWrap.insertBefore(hint, form);
+                }
+
+                form.addEventListener('submit', async (ev) => {
+                    ev.preventDefault();
+                    const postId = form.getAttribute('data-post-id');
+                    const input = form.querySelector('input[name="comment"]');
+                    const text = input && input.value.trim();
+                    if (!text) return;
+                    try {
+                        console.log('Submitting comment', { postId, text, user: auth.currentUser });
+                        await addComment(postId, text);
+                        input.value = '';
+                        // update debug panel if present
+                        try { updateDebugPanel(); } catch(e){}
+                    } catch (err) {
+                        console.error('addComment error', err);
+                        // show informative alert including Firestore/auth error code when available
+                        const code = err && err.code ? err.code : null;
+                        const msg = err && err.message ? err.message : String(err);
+                        if (code) {
+                            alert(`Không thể gửi bình luận (${code}): ${msg}`);
+                        } else {
+                            alert(`Không thể gửi bình luận. Vui lòng thử lại.\n${msg}`);
+                        }
+                        // if not authenticated, redirect to login
+                        if (msg && msg.includes('chưa đăng nhập')) {
+                            window.location.href = './đăng-nhập.html';
+                        }
+                        // expose last error for debugging UI
+                        try { window.__lastCommentError = { code, message: msg }; updateDebugPanel(); } catch(e){}
+                    }
+                });
+            }
+        });
+    }, (err) => {
+        console.error('posts onSnapshot error', err);
+    });
+    return unsubscribe;
+}
+
+// Add a comment under a post (requires authenticated user)
+export async function addComment(postId, text) {
+    const user = auth.currentUser;
+    console.log('addComment called', { postId, text, user });
+    if (!user) throw new Error('Người dùng chưa đăng nhập.');
+    const colRef = collection(db, 'posts', postId, 'comments');
+    try {
+        await addDoc(colRef, {
+            content: text,
+            authorId: user.uid,
+            authorName: user.displayName || user.email || 'Người dùng',
+            createdAt: serverTimestamp()
+        });
+    } catch (err) {
+        console.error('addDoc failed', err);
+        // rethrow so caller sees it (but keep err.code available)
+        throw err;
+    }
+}
+
+// Subscribe to comments for a given post and render into containerId
+export function subscribeToComments(postId, containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return () => {};
+    const col = collection(db, 'posts', postId, 'comments');
+    const q = query(col, orderBy('createdAt', 'asc'));
+    const unsubscribe = onSnapshot(q, (snap) => {
+        container.innerHTML = '';
+        snap.forEach(docSnap => {
+            const data = docSnap.data() || {};
+            const div = document.createElement('div');
+            div.className = 'comment-item';
+            const time = data.createdAt && data.createdAt.seconds ? new Date(data.createdAt.seconds * 1000).toLocaleString() : '';
+            div.innerHTML = `<strong>${escapeHtml(data.authorName || 'Người dùng')}</strong>: ${escapeHtml(data.content || '')} <br><small>${escapeHtml(time)}</small>`;
+            container.appendChild(div);
+        });
+    }, (err) => { console.error('comments onSnapshot error', err); });
+    return unsubscribe;
+}
+
+// enable or disable comment forms already rendered on the page
+export function enableCommentForms(enable) {
+    const forms = document.querySelectorAll('.comment-form');
+    forms.forEach(form => {
+        const input = form.querySelector('input[name="comment"]');
+        const btn = form.querySelector('button[type="submit"]');
+        if (input) input.disabled = !enable;
+        if (btn) btn.disabled = !enable;
+        // remove or add login hint
+        const wrap = form.parentElement;
+        if (!wrap) return;
+        const existingHint = wrap.querySelector('.comment-login-hint');
+        if (!enable && !existingHint) {
+            const hint = document.createElement('div');
+            hint.className = 'comment-login-hint';
+            hint.innerHTML = 'Vui lòng <a href="đăng-nhập.html">đăng nhập</a> để bình luận.';
+            wrap.insertBefore(hint, form);
+        } else if (enable && existingHint) {
+            existingHint.remove();
+        }
+    });
+}
+
 function escapeHtml(str) {
     if (!str) return '';
     return String(str)
@@ -90,6 +246,82 @@ function escapeHtml(str) {
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#39;');
 }
+
+// --- Simple Share UI handlers (preview selected file and send) ---
+document.addEventListener('DOMContentLoaded', () => {
+    const attachInput = document.getElementById('attach-file');
+    const attachName = document.getElementById('attach-name');
+    const sendBtn = document.getElementById('share-send');
+    const shareText = document.getElementById('share-text');
+
+    if (attachInput && attachName) {
+        attachInput.addEventListener('change', (ev) => {
+            const f = attachInput.files && attachInput.files[0];
+            attachName.textContent = f ? f.name : 'Chưa chọn tệp';
+        });
+    }
+
+    if (sendBtn) {
+        sendBtn.addEventListener('click', async (ev) => {
+            ev.preventDefault();
+            const text = shareText ? shareText.value.trim() : '';
+            // For now we only save text posts when user is logged in
+            try {
+                await savePost(text || '(Đính kèm)');
+                alert('Cảm ơn! Chia sẻ đã được lưu.');
+                if (shareText) shareText.value = '';
+                if (attachName) attachName.textContent = 'Chưa chọn tệp';
+                if (attachInput) attachInput.value = '';
+            } catch (e) {
+                console.error('share send error', e);
+                alert('Không thể gửi. Vui lòng đăng nhập hoặc thử lại sau.');
+            }
+        });
+    }
+    const postsContainer = document.getElementById('posts-container');
+    if (postsContainer) {
+        try {
+            // subscribe to real-time updates so new posts show up immediately
+            subscribeToPosts('posts-container');
+        } catch (err) {
+            console.error('subscribeToPosts invocation failed', err);
+        }
+    }
+
+    // Debug panel to help diagnose auth/comment issues (shows current user & last error)
+    try {
+        const existing = document.getElementById('debug-panel');
+        if (!existing) {
+            const panel = document.createElement('div');
+            panel.id = 'debug-panel';
+            panel.style.position = 'fixed';
+            panel.style.right = '12px';
+            panel.style.bottom = '12px';
+            panel.style.background = 'rgba(0,0,0,0.7)';
+            panel.style.color = '#fff';
+            panel.style.padding = '8px 10px';
+            panel.style.borderRadius = '8px';
+            panel.style.fontSize = '12px';
+            panel.style.zIndex = 9999;
+            panel.style.maxWidth = '300px';
+            panel.innerHTML = `<div><strong>Debug</strong></div><div id="debug-auth">Auth: ...</div><div id="debug-last">Last error: none</div>`;
+            document.body.appendChild(panel);
+        }
+    } catch (e) { console.warn('debug panel create failed', e); }
+
+    // helper to update debug panel (callable globally)
+    window.updateDebugPanel = function() {
+        try {
+            const a = document.getElementById('debug-auth');
+            const l = document.getElementById('debug-last');
+            const u = auth && auth.currentUser;
+            if (a) a.textContent = 'Auth: ' + (u ? (u.email || u.uid) : 'not signed in');
+            const last = window.__lastCommentError || null;
+            if (l) l.textContent = 'Last error: ' + (last ? (last.code ? last.code + ' — ' + last.message : last.message) : 'none');
+        } catch (e) { /* ignore */ }
+    };
+    try { updateDebugPanel(); } catch(e){}
+});
 
 // ===== STREAK LOGIC: số ngày liên tiếp đăng nhập =====
 function formatLocalDate(d) {
@@ -175,15 +407,12 @@ export function initStudyTimer() {
         // tìm phần tử hiển thị thời gian (hỗ trợ cả .total-study-time và .study-badge)
         const display = document.querySelector('.total-study-time, .study-badge');
         let total = loadTotalSeconds();
-        // session seconds counting while page is open
         let sessionSeconds = 0;
         let tick = null;
 
         function updateDisplay() {
             if (display) display.textContent = formatDuration(total + sessionSeconds);
         }
-
-        // start ticking every 1s
         function startTick() {
             if (tick) return;
             tick = setInterval(() => {
@@ -196,22 +425,15 @@ export function initStudyTimer() {
             if (tick) { clearInterval(tick); tick = null; }
         }
 
-        // start now
         updateDisplay();
         startTick();
-
-        // when page hidden, pause ticking (to avoid counting in background)
         document.addEventListener('visibilitychange', () => {
             if (document.hidden) stopTick(); else startTick();
         });
-
-        // on unload, save accumulated seconds
         window.addEventListener('beforeunload', () => {
             total += sessionSeconds;
             saveTotalSeconds(total);
         });
-
-        // also provide an explicit API to flush/save (if other code wants)
         return {
             getTotalSeconds: () => total + sessionSeconds,
             flush: () => { total += sessionSeconds; sessionSeconds = 0; saveTotalSeconds(total); updateDisplay(); }
@@ -220,8 +442,6 @@ export function initStudyTimer() {
         console.error('initStudyTimer error', e);
     }
 }
-
-// ===== SIGNUP & LOGIN HANDLERS (if forms exist on the page) =====
 document.addEventListener('DOMContentLoaded', () => {
     const signupForm = document.getElementById('signup-form');
     const signupMsg = document.getElementById('signup-message');
@@ -404,6 +624,9 @@ onAuthStateChanged(auth, async (user) => {
         try { updateNavForAuth && updateNavForAuth(!!user); } catch(e) { console.warn('updateNavForAuth error', e); }
         if (user) {
             renderAuthArea(user);
+            // enable comment forms when user logs in
+            try { enableCommentForms(true); } catch(e) { /* ignore */ }
+            try { if (window.updateDebugPanel) updateDebugPanel(); } catch(e){}
             // merge remote → local
             await syncFromFirestore(user.uid);
             // start periodic sync
@@ -415,6 +638,8 @@ onAuthStateChanged(auth, async (user) => {
             window.addEventListener('beforeunload', () => { try { syncLocalToFirestore(user.uid); } catch(e){} });
         } else {
             renderAuthArea(null);
+            try { enableCommentForms(false); } catch(e) { /* ignore */ }
+            try { if (window.updateDebugPanel) updateDebugPanel(); } catch(e){}
             if (_autoSyncInterval) { clearInterval(_autoSyncInterval); _autoSyncInterval = null; }
         }
     } catch (e) { console.error('onAuthStateChanged handler error', e); }

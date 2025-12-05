@@ -231,6 +231,46 @@
                 padding: 2px 6px;
                 border-radius: 6px;
             }
+            /* --- Share box styles --- */
+            .share-box{
+                max-width: 920px;
+                margin: 28px auto;
+                background: linear-gradient(180deg,#e9f3ff 0%, #f7fbff 100%);
+                border-radius: 12px;
+                padding: 20px 22px;
+                box-shadow: 0 8px 24px rgba(12,64,130,0.06);
+                border: 1px solid rgba(2,58,90,0.06);
+            }
+            .share-header{
+                font-size: 1.6rem;
+                font-weight: 800;
+                color: #0b4f7a;
+                margin-bottom: 12px;
+            }
+            .share-buttons{ display:flex; gap:12px; margin-bottom:12px; }
+            .share-type{ background:#fff; border:2px solid #dfeef8; padding:8px 12px; border-radius:8px; cursor:pointer; }
+            .share-input{ width:100%; min-height:72px; border-radius:10px; border:2px solid rgba(11,107,97,0.06); padding:12px 14px; font-size:1rem; resize:vertical; }
+            .share-attach-row{ display:flex; align-items:center; gap:12px; margin-top:12px; }
+            .attach-label{ color:#0b4f7a; font-weight:700; }
+            .attach-input{ display:none; }
+            .attach-name{ color:#2f4f5a; font-size:0.95rem; margin-left:6px; flex:1 }
+            .share-send{ margin-left:auto; background: #2e1b5f; color:#fff; padding:12px 22px; border-radius:28px; border:none; cursor:pointer; font-weight:700; }
+            .share-send:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(46,27,95,0.12); }
+                        /* Posts list styles */
+                        .posts-section{ max-width:920px; margin:28px auto; padding:18px 0; }
+                        .posts-header{ padding-left: 0; }
+                        .posts-header h2{ margin:0; color:#0b5a78; font-size:1.5rem; margin-left:0; }
+                        .posts-sub{ margin:6px 0 12px; color:#406b78; margin-left:0 }
+                        .posts-container{ display:flex; flex-direction:column; gap:14px; }
+                        .post-item{ background:#fff; border-radius:10px; padding:14px; border:1px solid rgba(2,58,90,0.04); box-shadow:0 6px 18px rgba(2,58,90,0.03); }
+                        .post-item p{ margin:0 0 8px 0; color:#153b4a }
+                        .post-item small{ color:#486b77; font-size:0.9rem }
+                        .comment-wrap{ margin-top:10px; margin-left:12px; }
+                        .comment-list{ margin-top:8px; display:flex; flex-direction:column; gap:8px; }
+                        .comment-item{ background:#f7fbff; padding:8px 10px; border-radius:8px; border:1px solid rgba(2,58,90,0.03); color:#153b4a }
+                        .comment-form{ display:flex; gap:8px; margin-top:8px }
+                        .comment-form input[type="text"]{ flex:1; padding:8px 10px; border-radius:8px; border:1px solid rgba(2,58,90,0.06) }
+                        .comment-form button{ background:#0b6b61; color:#fff; border:none; padding:8px 12px; border-radius:8px; cursor:pointer }
             .nav-list7{
                 font-family: inherit;
                 color: #023A5A;
